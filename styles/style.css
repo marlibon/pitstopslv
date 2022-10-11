@@ -42,17 +42,17 @@
     }
 }
 .page {
-    height: 110%;
-    overflow: hidden;
+    height: auto;
     margin: 0 auto;
     padding: 0px;
     font: inherit;
     vertical-align: baseline;
     background: rgb(255, 255, 255);
-    max-width: 1200px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 } 
 .header {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px 0 20px 0;
     max-height: 90px;
     display: flex;
@@ -67,9 +67,10 @@ padding: 0 20px 0 20px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
+
 }
 .logo__img:hover {
-    animation: logo_rotate 0.2s linear;
+    animation: logo_rotate 0.3s linear;
     box-shadow: 1px 1px 1px #434343;
 }
 .header__info {
@@ -157,6 +158,8 @@ padding: 0 20px 0 20px;
     box-shadow: #ffe600 0px 4px 12px -6px;
 }
 .menu {
+    max-width: 1200px;
+    margin:auto;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -252,12 +255,55 @@ padding: 0 20px 0 20px;
 .menu__link:hover {
     text-decoration: underline;
 }
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .chasto__title {
     margin-top: 30px;
     font-weight: 500;
 }
 .chasto__slider {
     display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.chasto__slider-button {
+    position: absolute;
+    top:30%;
+    display: block;
+    z-index: 999;
+    background-color: #fff;
+    opacity: 0.5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.chasto__slider-button:hover {
+    opacity: 0.9;
+    scale: 1.1;
+}
+.chasto__slider-button-img {
+    width: 30px;
+    height: 30px;
+;
+}
+.chasto__slider-button-prev {
+    left: 0;
+    display: none;
+}
+.chasto__slider-button-next {
+    right: 0;
+}
+
+#js-chasto {
+    display: flex;
+    translate: 0px 0;
+    transition: translate 0.5s ease-in-out;
 }
 .chasto__item {
     background: rgb(255, 255, 255);
@@ -270,6 +316,7 @@ padding: 0 20px 0 20px;
     width: 260px;
     padding: 16px;
     margin-right: 24px;
+    margin-bottom: 12px;
 }
 .chasto__item:hover {
     box-shadow: #eed603 0px 6px 22px -6px;
@@ -311,7 +358,7 @@ padding: 0 20px 0 20px;
 .tovar__title {
     margin: 0;
     padding: 0;
-    margin: 30px 0 30px;
+    margin: 20px 0 30px;
     font-weight: 500;
     font-size: 36px;
 }
@@ -391,4 +438,39 @@ padding: 0 20px 0 20px;
 .kartochka__button:hover {
     background-color: #eed603;
     color: #a74702;
+}
+.footer {
+    margin-top: 100px;
+    height: 50vh;
+    width: 100%;
+    background-color: black;
+}
+.footer__links {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+}
+.footer__column {
+    font-size: 23px;
+    margin: 50px 100px 0 0;
+    display: flex;
+    list-style-type: none;
+    color:rgb(255, 255, 255);
+    flex-direction: column;
+    
+}
+.footer__link {
+    color:rgb(255, 255, 255);
+    font-size: 23px;
+    line-height: 1.2;
+    margin-top: 9px;
+    white-space: normal;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.footer__link:hover {
+    opacity: 1;
 }

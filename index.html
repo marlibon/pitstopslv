@@ -31,10 +31,11 @@
    
     <div class="menu__cart"><a href="" class="menu__cart-link">Корзина</a></div>
     </nav>
-    <main>
+    <main class="main">
       <section class="chasto">
         <h2 class="chasto__title">Часто заказывают</h2>
-        <div class="chasto__slider" id="js">
+        <div class="chasto__slider"> 
+          <div id="js-chasto">
           <article class="chasto__item">
             <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
             <div class="chasto__opisanie">
@@ -72,9 +73,16 @@
             </div>
           </article>
         </div>
+        <a class="chasto__slider-button chasto__slider-button-prev" href="#">
+          <img src="./images/slider-rev.png" alt="" class="chasto__slider-button-img">
+        </a>
+        <a class="chasto__slider-button chasto__slider-button-next" href="#">
+          <img src="./images/slider-next.png" alt="" class="chasto__slider-button-img">
+        </a>
+      </div>
       </section>
       <h2 class="tovar__title">Пицца</h2>
-      <section class="tovars pizza">
+      <section class="tovars" id="js-pizza">
         <article class="kartochka">
           <img src="./images/pizza-example.png" alt="описание товара" class="kartochka__img">
           <h3 class="kartochka__title">Название пиццы</h3>
@@ -113,8 +121,28 @@
         </article>
       </section>
     </main>
-    <div id=""></div>
-      <script src="./index.js"></script>
-      <script src="./base.js"></script>
+    <footer class="footer">
+      <div class="footer__links">
+        <ul class="footer__column">
+          <li>Пит-Стоп</li>
+          <li><a href="#" class="footer__link">О нас</a></li>
+          <li><a href="#" class="footer__link">Доставка</a></li>
+          <li><a href="#" class="footer__link">Контакты</a></li>
+          <li><a href="#" class="footer__link">Акции</a></li>
+          <li><a href="#" class="footer__link">Вакансии</a></li>
+
+        </ul>
+        <ul class="footer__column">
+          <li>Этот сайт</li>
+          <li><a href="#" class="footer__link">Нашли ошибку?</a></li>
+          <li><a href="#" class="footer__link">Письмо директору</a></li>
+          <li><a href="#" class="footer__link">Хочу такой же сайт!</a></li>
+        </ul>
+
+      </div>
+    </footer>
+      <script src="./js/phrase.js"></script>
+      <script src="./js/base.js"></script>
+      <script src="./js/slider.js"></script>
 </body>
 </html>
