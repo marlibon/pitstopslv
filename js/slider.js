@@ -17,7 +17,7 @@ widthСhastoItem = Math.floor(widthСhastoItem);// округлили до за�
 
 
 
-jsChasto = getComputedStyle(jsChasto).translate; // вытащили стиль translate 
+jsChasto = getComputedStyle(jsChasto).translate; // вытащили стиль translate именно значение
 /* далее в переменной отображаем только цифры */
 let intjsChasto = jsChasto.substring(0,jsChasto.search('px')); // substring - выводит значения с 0 до
 intjsChasto = parseInt(intjsChasto); //parseInt преобразует строку в число,
@@ -34,6 +34,7 @@ next.addEventListener('click', function () {
   }
   else {
   let newtranslate = parseInt(inttranslate)-inttranslate[3]; //  двигаем блок налево на 150
+  
   return [document.getElementById('js-chasto').style.translate = newtranslate + 'px 0',
   prev.style.display = "flex"] // обернули в массив сразу 2 действия. добавить свойство для translate и при этом начать показывать левую кнопку прокрутки
   }
