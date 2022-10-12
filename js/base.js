@@ -8,7 +8,8 @@ base = [
     img: './images/free.jpeg',
     cost: 630,
     chasto: true,
-    tip: 'free' 
+    tip: 'free' ,
+    ves: 640
     },
     {
     id: 1,
@@ -17,7 +18,8 @@ base = [
     img: './images/pizza-example.png',
     cost: 424,
     chasto: true,
-    tip: 'pizza'
+    tip: 'pizza',
+    ves: 340
     },
     {
     id: 2,
@@ -26,7 +28,8 @@ base = [
     img: './images/pizza-myasnaya.png',
     cost: 424,
     chasto: true,
-    tip: 'pizza'    
+    tip: 'pizza'  ,
+    ves: 440  
     },
     {
     id: 3,
@@ -35,7 +38,8 @@ base = [
     img: './images/pizza-example.png',
     cost: 824,
     chasto: true,
-    tip: 'pizza' 
+    tip: 'pizza',
+    ves: 540
     },
     {
     id: 4,
@@ -44,7 +48,8 @@ base = [
     img: './images/pizza-example.png',
     cost: 824,
     chasto: true,
-    tip: 'pizza' 
+    tip: 'pizza',
+    ves: 240
     },
     {
     id: 5,
@@ -53,7 +58,8 @@ base = [
     img: './images/dodster.png',
     cost: 440,
     chasto: true,
-    tip: 'burger' 
+    tip: 'burger',
+    ves: 240
     },
     {
     id: 6,
@@ -62,7 +68,8 @@ base = [
     img: './images/free.jpeg',
     cost: 230,
     chasto: true,
-    tip: 'free' 
+    tip: 'free',
+    ves: 640
     },
     {
     id: 7,
@@ -71,7 +78,8 @@ base = [
     img: './images/pizza-example.png',
     cost: 824,
     chasto: true,
-    tip: 'pizza' 
+    tip: 'pizza',
+    ves: 540
     },
 ];
 

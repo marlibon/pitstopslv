@@ -142,21 +142,36 @@
       </div>
     </footer>
     <!-- модальные окна -->
-    <div class="modal">
-      <!--   Svg иконка для закрытия окна  -->
-      <a onclick="closeButton()"><svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg></a>
-      <div class="modal__content" id="js-modal__content">
+    <div class="modal" id="js-modal__content">
+      
         <img src="./images/pizza-example.png" alt="описание товара" class="modal__img">
         <div class="modal__description">
+          <h3 class="modal__title">Название пиццы</h3>
+          <p class="modal__ves">840 г</p>
+          <p class="modal__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
+          <div class="modal__razmer">
+            <label for="small" class="modal__razmer_label">
+            <input type="radio" name="razmer" id="small" class="modal__razmer_radio" value="small" checked>
+            <span class="modal__razmer_text">Маленькая</span>
+            </label>
+            <label for="medium" class="modal__razmer_label">
+              <input type="radio" name="razmer" id="medium" class="modal__razmer_radio" value="medium" >
+              <span class="modal__razmer_text">Средняя</span>
+              </label>
+              <label for="big" class="modal__razmer_label">
+                <input type="radio" name="razmer" id="big" class="modal__razmer_radio" value="big" >
+                <span class="modal__razmer_text">Большая</span>
+                </label>
+                   
+              
 
+          </div>
+          <div class="modal__footer">
+            <div class="modal__price">от 416руб.</div>
+            <div class="modal__button">Выбрать</div>
+          </div>
         </div>
-        <h3 class="kartochka__title">Название пиццы</h3>
-        <p class="kartochka__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
-        <div class="kartochka__footer">
-          <div class="kartochka__price">от 416руб.</div>
-          <div class="kartochka__button">Выбрать</div>
-        </div>
-      </div>
+
    </div>
   
    <a onclick="closeButton()" class="overlay"></a>

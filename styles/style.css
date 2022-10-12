@@ -506,7 +506,7 @@ padding: 0 20px 0 20px;
  .modal {
     visibility: hidden;
     opacity: 0;
-    width: 923px;
+    width: 990px;
     height: 610px;
     position: fixed;
     top: 50%;
@@ -516,9 +516,15 @@ padding: 0 20px 0 20px;
     box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
     text-align: center;
     padding: 30px;
-    border-radius: 3px;
     background-color: #fff;
     transition: 0.3s all;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: opacity 150ms ease 0s, transform;
+    display: flex;
+
  }
  
  /* для кнопки закрытия */
@@ -527,29 +533,49 @@ padding: 0 20px 0 20px;
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 20px;
-    right: 20px;
-    fill: #444;
+    top: -40px;
+    right: -40px;
+    fill: #fff;
     cursor: pointer;
  }
- 
+ .modal__cross:hover {
+    animation: scale 4s;
+ }
  
 .js-active {
     visibility: visible;
     opacity: 1;
 }
-.modal__content {
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px;
-    box-sizing: border-box;
-    background: rgb(255, 255, 255);
-    border-radius: 20px;
-    transition: opacity 150ms ease 0s, transform;
-    display: flex;
+.modal__title {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 500;
+}
+.modal__ves {
+    margin: 10px 0 10px 0;
+    padding: 0;
+    color: rgb(92, 99, 112);
+    font-size: 20px;
+    line-height: 20px;
 }
 .modal__img {
-    
+
 }
 .modal__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.modal__opisanie {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: left;
 
 }
