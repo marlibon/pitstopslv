@@ -272,7 +272,7 @@ padding: 0 20px 0 20px;
     position: absolute;
     top:30%;
     display: block;
-    z-index: 999;
+    z-index: 10;
     background-color: #fff;
     opacity: 0.5;
     width: 50px;
@@ -372,7 +372,7 @@ padding: 0 20px 0 20px;
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    padding-right: 30px;
+    padding: 0 30px 30px 0;
     cursor: pointer;
 }
 .kartochka__img {
@@ -488,7 +488,7 @@ padding: 0 20px 0 20px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 20;
+    z-index: 99;
     transition: .3s all;
  }
  
@@ -504,20 +504,15 @@ padding: 0 20px 0 20px;
     visibility: hidden;
  }
  .modal {
-    
-    
-    /*  Установаем ширину окна  */
-    width: 100%;
-    max-width: 500px;
-    
-    /*  Центрируем и задаем z-index */
+    visibility: hidden;
+    opacity: 0;
+    width: 923px;
+    height: 610px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 30; /* Должен быть выше чем у подложки*/
-    
-    /*  Побочные стили   */
+    z-index: 999; 
     box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
     text-align: center;
     padding: 30px;
@@ -529,8 +524,8 @@ padding: 0 20px 0 20px;
  /* для кнопки закрытия */
  
  .modal__cross {
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -539,3 +534,22 @@ padding: 0 20px 0 20px;
  }
  
  
+.js-active {
+    visibility: visible;
+    opacity: 1;
+}
+.modal__content {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: opacity 150ms ease 0s, transform;
+    display: flex;
+}
+.modal__img {
+    
+}
+.modal__description {
+
+}

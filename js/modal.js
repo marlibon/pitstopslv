@@ -1,10 +1,12 @@
-    let overlay = document.getElementsByClassName('overlay')
+let ClassModal = document.getElementsByClassName('modal')
+let ClassOverlay = document.getElementsByClassName('overlay')
 
-function modal(argument=1) {
-    return [document.getElementById('modal' + argument).style.visibility = 'visible',overlay[0].style.visibility='visible',overlay[0].style.opacity='1']
+function modal(id) {
+    let ClassModalContent = '<article class="kartochka"><img src="' + base[id].img + '" alt="' + base[id].description + '" class="kartochka__img"><h3 class="kartochka__title">' + base[id].name + '</h3><p class="kartochka__opisanie">' + base[id].description + '</p><div class="kartochka__footer"><p class="kartochka__price">от ' + base[id].cost + 'руб.</p><button class="kartochka__button" onclick="modal('+ base[id].id +')">Выбрать</button></div></article>';
+    return [document.getElementById('js-modal__content').innerHTML = ClassModalContent, ClassModal[0].classList.add('js-active'),ClassOverlay[0].classList.add('js-active')]
 }
 
-let closeButton = document.querySelector('.modal__cross');
-closeButton.addEventListener('click', function () {
-    return [document.getElementById('modal1').style.visibility = 'hidden',overlay[0].style.visibility='hidden',overlay[0].style.opacity='0']
-})
+function closeButton() 
+{
+    return [ClassModal[0].classList.remove('js-active'),ClassOverlay[0].classList.remove('js-active')]
+}

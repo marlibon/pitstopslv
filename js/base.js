@@ -2,6 +2,16 @@
 let base;
 base = [
     {
+    id: 0,
+    name: 'Картошка фри двойная',
+    description: 'сделано из отборной картошки',
+    img: './images/free.jpeg',
+    cost: 630,
+    chasto: true,
+    tip: 'free' 
+    },
+    {
+    id: 1,
     name: 'Деревенская',
     description: 'Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус',
     img: './images/pizza-example.png',
@@ -10,6 +20,7 @@ base = [
     tip: 'pizza'
     },
     {
+    id: 2,
     name: 'Мясная',
     description: 'Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус',
     img: './images/pizza-myasnaya.png',
@@ -18,6 +29,7 @@ base = [
     tip: 'pizza'    
     },
     {
+    id: 3,
     name: 'Охотничья',
     description: 'Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус',
     img: './images/pizza-example.png',
@@ -26,6 +38,7 @@ base = [
     tip: 'pizza' 
     },
     {
+    id: 4,
     name: 'Гавайская',
     description: 'Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус',
     img: './images/pizza-example.png',
@@ -34,6 +47,7 @@ base = [
     tip: 'pizza' 
     },
     {
+    id: 5,
     name: 'ПитСтоп',
     description: 'популярный бургер',
     img: './images/dodster.png',
@@ -42,6 +56,7 @@ base = [
     tip: 'burger' 
     },
     {
+    id: 6,
     name: 'Картошка фри',
     description: 'сделано из отборной картошки',
     img: './images/free.jpeg',
@@ -50,14 +65,14 @@ base = [
     tip: 'free' 
     },
     {
-    name: 'Картошка фри двойная',
-    description: 'сделано из отборной картошки',
-    img: './images/free.jpeg',
-    cost: 630,
+    id: 7,
+    name: 'Гавайская плюс',
+    description: 'Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус',
+    img: './images/pizza-example.png',
+    cost: 824,
     chasto: true,
-    tip: 'free' 
-    }
-
+    tip: 'pizza' 
+    },
 ];
 
 let chasto = base.filter(obj => obj.chasto == true) // собираем в массив только те записи, где есть свойство chasto и используем этот массив в будущем
@@ -65,7 +80,7 @@ let chasto = base.filter(obj => obj.chasto == true) // собираем в ма�
 let chasto_slider = ''; // 
 for (let i = 0; i< chasto.length; i++  )  {
 
-chasto_slider += '<article class="chasto__item"><img src="' + chasto[i].img + '" alt="' + chasto[i].description + '" class="chasto__img"><div class="chasto__opisanie"><h3 class="chasto__subtitle">' + chasto[i].name + '</h3><div class="chasto__subopisanie">от ' + chasto[i].cost + ' руб.</div></div></article>';
+chasto_slider += '<article onclick="modal(' + chasto[i].id + ')" class="chasto__item"><img src="' + chasto[i].img + '" alt="' + chasto[i].description + '" class="chasto__img"><div class="chasto__opisanie"><h3 class="chasto__subtitle">' + chasto[i].name + '</h3><div class="chasto__subopisanie">от ' + chasto[i].cost + ' руб.</div></div></article>';
 }
 document.getElementById('js-chasto').innerHTML = chasto_slider;
 
@@ -80,7 +95,7 @@ function tipaeda (nazvanie) {
     let codehtml = '';
     for (let i = 0; i< tipeda.length; i++  )  {
 
-        codehtml += '<article class="kartochka"><img src="' + tipeda[i].img + '" alt="' + tipeda[i].description + '" class="kartochka__img"><h3 class="kartochka__title">' + tipeda[i].name + '</h3><p class="kartochka__opisanie">' + tipeda[i].description + '</p><div class="kartochka__footer"><p class="kartochka__price">от ' + tipeda[i].cost + 'руб.</p><button class="kartochka__button">Выбрать</button></div></article>';
+        codehtml += '<article onclick="modal(' + tipeda[i].id + ')" class="kartochka"><img src="' + tipeda[i].img + '" alt="' + tipeda[i].description + '" class="kartochka__img"><h3 class="kartochka__title">' + tipeda[i].name + '</h3><p class="kartochka__opisanie">' + tipeda[i].description + '</p><div class="kartochka__footer"><p class="kartochka__price">от ' + tipeda[i].cost + 'руб.</p><button class="kartochka__button" onclick="modal('+ tipeda[i].id +')">Выбрать</button></div></article>';
         }
         return codehtml;
 }
