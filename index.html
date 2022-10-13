@@ -36,7 +36,7 @@
         <h2 class="chasto__title">Часто заказывают</h2>
         <div class="chasto__slider"> 
           <div id="js-chasto">
-          <article class="chasto__item">
+          <article class="chastoItem">
             <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
             <div class="chasto__opisanie">
               <h3 class="chasto__subtitle">Название пиццы</h3>
@@ -45,7 +45,7 @@
               </div>
             </div>
           </article>
-          <article class="chasto__item">
+          <article class="chastoItem">
             <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
             <div class="chasto__opisanie">
               <h3 class="chasto__subtitle">Название пиццы</h3>
@@ -54,7 +54,7 @@
               </div>
             </div>
           </article>
-          <article class="chasto__item">
+          <article class="chastoItem">
             <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
             <div class="chasto__opisanie">
               <h3 class="chasto__subtitle">Название пиццы</h3>
@@ -63,7 +63,7 @@
               </div>
             </div>
           </article>
-          <article class="chasto__item">
+          <article class="chastoItem">
             <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
             <div class="chasto__opisanie">
               <h3 class="chasto__subtitle">Название пиццы</h3>
@@ -83,7 +83,7 @@
       </section>
       <h2 class="tovar__title">Пицца</h2>
       <section class="tovars" id="js-pizza">
-        <article class="kartochka">
+        <article class="kartochka" data-id="1">
           <img src="./images/pizza-example.png" alt="описание товара" class="kartochka__img">
           <h3 class="kartochka__title">Название пиццы</h3>
           <p class="kartochka__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
@@ -134,7 +134,7 @@
         </ul>
         <ul class="footer__column">
           <li>Этот сайт</li>
-          <li><a onclick="modal()" class="footer__link" >Нашли ошибку?</a></li>
+          <li><a href="#" onclick="modal(); return false;" class="footer__link" >Нашли ошибку?</a></li>
           <li><a href="#" class="footer__link">Письмо директору</a></li>
           <li><a href="#" class="footer__link">Хочу такой же сайт!</a></li>
         </ul>
@@ -144,21 +144,24 @@
     <!-- модальные окна -->
     <div class="modal" id="js-modal__content">
       
-        <img src="./images/pizza-example.png" alt="описание товара" class="modal__img">
+        <div class="modal__imgzone">
+          
+          <img src="./images/pizza-example.png" alt="описание товара" class="modal__img">
+        </div>
         <div class="modal__description">
           <h3 class="modal__title">Название пиццы</h3>
           <p class="modal__ves">840 г</p>
           <p class="modal__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
           <div class="modal__razmer">
-            <label for="small" class="modal__razmer_label">
-            <input type="radio" name="razmer" id="small" class="modal__razmer_radio" value="small" checked>
+            <label for="small" class="modal__razmer_label" onclick="choiceRazmer('small')">
+            <input type="radio" name="razmer" id="small" class="modal__razmer_radio" value="small">
             <span class="modal__razmer_text">Маленькая</span>
             </label>
-            <label for="medium" class="modal__razmer_label">
-              <input type="radio" name="razmer" id="medium" class="modal__razmer_radio" value="medium" >
+            <label for="medium" class="modal__razmer_label" onclick="choiceRazmer('medium')">
+              <input type="radio" name="razmer" id="medium" class="modal__razmer_radio" value="medium" checked>
               <span class="modal__razmer_text">Средняя</span>
               </label>
-              <label for="big" class="modal__razmer_label">
+              <label for="big" class="modal__razmer_label" onclick="choiceRazmer('big')">
                 <input type="radio" name="razmer" id="big" class="modal__razmer_radio" value="big" >
                 <span class="modal__razmer_text">Большая</span>
                 </label>
@@ -171,11 +174,12 @@
 
    </div>
   
-   <a onclick="closeButton()" class="overlay"></a>
+   <a href="#" onclick="closeButton(); return false;" class="overlay"></a>
 
       <script src="./js/phrase.js"></script>
       <script src="./js/base.js"></script>
-      <script src="./js/slider.js"></script>
       <script src="./js/modal.js"></script>
+      <script src="./js/slezhu.js"></script>      
+      <script src="./js/slider.js"></script>
 </body>
 </html>

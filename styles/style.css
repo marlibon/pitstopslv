@@ -305,7 +305,7 @@ padding: 0 20px 0 20px;
     translate: 0px 0;
     transition: translate 0.5s ease-in-out;
 }
-.chasto__item {
+.chastoItem {
     background: rgb(255, 255, 255);
     transition: box-shadow 150ms ease-out 0s;
     box-shadow: #ffe600 0px 4px 12px -6px;
@@ -318,7 +318,7 @@ padding: 0 20px 0 20px;
     margin-right: 24px;
     margin-bottom: 12px;
 }
-.chasto__item:hover {
+.chastoItem:hover {
     box-shadow: #eed603 0px 6px 22px -6px;
 }
 .chasto__img {
@@ -506,8 +506,8 @@ padding: 0 20px 0 20px;
  .modal {
     visibility: hidden;
     opacity: 0;
-    width: 990px;
-    height: 610px;
+    /*width: 990px;
+    height: 610px;*/
     position: fixed;
     top: 50%;
     left: 50%;
@@ -560,8 +560,16 @@ padding: 0 20px 0 20px;
     font-size: 20px;
     line-height: 20px;
 }
+.modal__imgzone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .modal__img {
-
+    width: 400px;
+    height: 400px;
+    padding: 50px;
 }
 .modal__description {
     display: flex;
@@ -577,4 +585,54 @@ padding: 0 20px 0 20px;
     line-height: 20px;
     font-weight: 400;
     text-align: left;
+}
+.modal__razmer {
+    border-radius: 40px;
+    background-color: rgb(243, 243, 247);
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin: 8px 0px;
+}
+.modal__razmer_label {
+    box-sizing: border-box;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    transition: color 150ms ease 0s;
+
+
+}
+.modal__razmer_radio {
+    width: 1px; 
+    height: 1px;
+    overflow: hidden; 
+    clip: rect(0 0 0 0);
+}
+label, input, span {
+    margin: 0;
+    padding: 0;
+}
+input[type="radio"] {
+    position: absolute;
+    width: 1px; 
+    height: 1px;
+    overflow: hidden; 
+    clip: rect(0 0 0 0);
+}
+input[type="radio"] + span {
+    padding: 5px 25px 5px 25px;
+}
+input[type="radio"]:checked + span {
+    font-weight: 500;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    transition: color 150ms ease 0s;
+
 }
