@@ -103,7 +103,7 @@ function tipaeda (nazvanie) {
     let codehtml = '';
     for (let i = 0; i< tipeda.length; i++  )  {
 
-        codehtml += '<article class="kartochka" data-id="' + tipeda[i].id + '"><img src="' + tipeda[i].img + '" alt="' + tipeda[i].description + '" class="kartochka__img"><h3 class="kartochka__title">' + tipeda[i].name + '</h3><p class="kartochka__opisanie">' + tipeda[i].description + '</p><div class="kartochka__footer"><p class="kartochka__price">от ' + tipeda[i].cost + 'руб.</p><button class="kartochka__button" onclick="modal('+ tipeda[i].id +')">Выбрать</button></div></article>';
+        codehtml += '<article class="kartochka" data-id="' + tipeda[i].id + '"><img src="' + tipeda[i].img + '" alt="' + tipeda[i].description + '" class="kartochka__img"><h3 class="kartochka__title">' + tipeda[i].name + '</h3><p class="kartochka__opisanie">' + tipeda[i].description + '</p><div class="kartochka__footer"><p class="kartochka__price">от ' + tipeda[i].cost + 'руб.</p><button class="kartochka__button">Выбрать</button></div></article>';
         }
         return codehtml;
 }

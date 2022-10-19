@@ -134,15 +134,15 @@
         </ul>
         <ul class="footer__column">
           <li>Этот сайт</li>
-          <li><a href="#" onclick="modal(); return false;" class="footer__link" >Нашли ошибку?</a></li>
-          <li><a href="#" class="footer__link">Письмо директору</a></li>
-          <li><a href="#" class="footer__link">Хочу такой же сайт!</a></li>
+          <li><a href="#" class="footer__link feedback" data-name="error">Нашли ошибку?</a></li>
+          <li><a href="#" class="footer__link feedback" data-name="letter">Письмо директору</a></li>
+          <li><a href="#" class="footer__link feedback" data-name="site">Хочу такой же сайт!</a></li>
         </ul>
 
       </div>
     </footer>
     <!-- модальные окна -->
-    <div class="modal" id="js-modal__content">
+    <div class="modal" id="js-modalTovar">
       
         <div class="modal__imgzone">
           
@@ -173,7 +173,7 @@
         </div>
 
    </div>
-  
+  <div class="modal" id="modalFeedBack"></div>
    <a href="#" onclick="closeButton(); return false;" class="overlay"></a>
 
       <script src="./js/phrase.js"></script>
