@@ -1,5 +1,5 @@
 /* модальные окна - карточки товара*/
-let ClassModal = document.getElementById('js-modalTovar')
+let ClassModal = document.getElementById('js-modal')
 let ClassOverlay = document.getElementsByClassName('overlay')
 
 function modal(id) {
@@ -8,15 +8,36 @@ function modal(id) {
 
 
 
-    ClassModalContent += '<img src="' + base[id].img + '" alt="' + base[id].description + '" class="modal__img"><div class="modal__description"><h3 class="modal__title">' + base[id].name + '</h3><p class="modal__ves">' + base[id].ves + 'г</p><p class="modal__opisanie">' + base[id].description + '</p><div class="modal__razmer"><label for="small" class="modal__razmer_label"><input type="radio" name="razmer" id="small" class="modal__razmer_radio" value="small" onclick="choiceRazmer(`small`)"><span class="modal__razmer_text">Маленькая</span></label><label for="medium" class="modal__razmer_label"><input type="radio" name="razmer" id="medium" class="modal__razmer_radio" value="medium" onclick="choiceRazmer(`medium`)" checked><span class="modal__razmer_text">Средняя</span></label><label for="big" class="modal__razmer_label"><input type="radio" name="razmer" id="big" class="modal__razmer_radio" value="big" onclick="choiceRazmer(`big`)"><span class="modal__razmer_text">Большая</span></label></div><div class="modal__footer"><div class="modal__price">от ' + base[id].cost + 'руб.</div><div class="modal__button">Выбрать</div></div></div>';
-    let razmer;
-    return [document.getElementById('js-modalTovar').innerHTML = ClassModalContent, ClassModal.classList.add('js-active'),ClassOverlay[0].classList.add('js-active')]
+ClassModalContent += '<img src="' + base[id].img + '" alt="' + base[id].description + '" id="modalImg" class="modal__img">'
+ClassModalContent += '<div class="modal__description">'
+ClassModalContent += '    <h3 class="modal__title">' + base[id].name + '</h3>'
+ClassModalContent += '    <p class="modal__ves">' + base[id].ves + 'г</p>'
+ClassModalContent += '    <p class="modal__opisanie">' + base[id].description + '</p>'
+ClassModalContent += '    <div class="modal__razmer">'
+ClassModalContent += '        <label for="small" class="modal__razmer_label">'
+ClassModalContent += '            <input type="radio" name="razmer" id="small" class="modal__razmer_radio" value="small" onclick="choiceRazmer(`small`)">'
+ClassModalContent += '                <span class="modal__razmer_text">Маленькая</span>'
+ClassModalContent += '        </label>'
+ClassModalContent += '        <label for="medium" class="modal__razmer_label">'
+ClassModalContent += '            <input type="radio" name="razmer" id="medium" class="modal__razmer_radio" value="medium" onclick="choiceRazmer(`medium`)" checked>'
+ClassModalContent += '                <span class="modal__razmer_text">Средняя</span>'
+ClassModalContent += '        </label>'
+ClassModalContent += '        <label for="big" class="modal__razmer_label">'
+ClassModalContent += '            <input type="radio" name="razmer" id="big" class="modal__razmer_radio" value="big" onclick="choiceRazmer(`big`)">'
+ClassModalContent += '                <span class="modal__razmer_text">Большая</span>'
+ClassModalContent += '        </label>'
+ClassModalContent += '    </div>'
+ClassModalContent += '    <div class="modal__footer">'
+ClassModalContent += '        <div class="modal__price">от ' + base[id].cost + 'руб.</div>'
+ClassModalContent += '        <div class="modal__button">Выбрать</div></div></div>';
+    return [ClassModal.innerHTML = ClassModalContent, ClassModal.classList.add('js-active'),ClassOverlay[0].classList.add('js-active')]
 }
 
-function choiceRazmer(a) { //выбор размера пиццы, изменение картинки
-    let razmer = (a == 'small') ? document.getElementsByClassName('modal__img')[0].style = "scale: 0.8" : ''
-    razmer = (a == 'medium') ? document.getElementsByClassName('modal__img')[0].style = "scale: 1" : ''
-    razmer = (a == 'big') ? document.getElementsByClassName('modal__img')[0].style = "scale: 1.2" : ''
+function choiceRazmer(a) { //выбор размера пиццы, изменение масштаба картинки
+    let modalImg = document.getElementById('modalImg');
+    let razmer = (a == 'small') ? modalImg.style = "scale: 0.8" : ''
+    razmer = (a == 'medium') ? modalImg.style = "scale: 1" : ''
+    razmer = (a == 'big') ? modalImg.style = "scale: 1.2" : ''
 return razmer;
 }
 
@@ -26,9 +47,8 @@ function modalFeedBack(id) {
 
 
 
-
     ClassModalContent += id;
-    return [document.getElementById('modalFeedBack').innerHTML = ClassModalContent, ClassModal.classList.add('js-active'),ClassOverlay[0].classList.add('js-active')]
+    return [ClassModal.innerHTML = ClassModalContent, ClassModal.classList.add('js-active'),ClassOverlay[0].classList.add('js-active')]
 }
 
 
