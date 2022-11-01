@@ -1,0 +1,15 @@
+@keyframes shirina {
+    0% {
+    width: 0px;
+    }
+    100% {
+    width: 250px;
+    }
+    }
+
+.header__phrase-animation {
+    margin: 0;
+    padding: 0;
+    animation: shirina 2s linear infinite alternate;
+    height: 28px;
+}

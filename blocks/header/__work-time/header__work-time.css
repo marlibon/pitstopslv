@@ -1,0 +1,19 @@
+.header__work-time {
+    position: relative;
+    margin-left: 60px;
+    padding-left: 40px;
+    font-size: 26px;
+    color: #434343;
+    line-height: initial;
+}
+.header__work-time:before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/clock-icon.svg);
+    top: 7px;
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+}

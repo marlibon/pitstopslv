@@ -1,0 +1,37 @@
+@import url('../blocks/page/page.css');
+
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__info/header__info.css');
+@import url('../blocks/header/__description/header__description.css');
+@import url('../blocks/header/__phrase/header__phrase.css');
+@import url('../blocks/header/__phrase-animation/header__phrase-animation.css');
+@import url('../blocks/header/__brand/header__brand.css');
+@import url('../blocks/header/__work-time/header__work-time.css');
+@import url('../blocks/header/__phone/header__phone.css');
+@import url('../blocks/header/_textdecoration_underline/header_textdecoration_underline.css');
+@import url('../blocks/header/_color_red/header_color_red.css');
+
+@import url('../blocks/logo/logo.css');
+@import url('../blocks/logo/__img/logo__img.css');
+
+@import url('../blocks/menu/menu.css');
+@import url('../blocks/menu/__line/menu__line.css');
+@import url('../blocks/menu/__item/menu__item.css');
+@import url('../blocks/menu/__item/_decor_elem/menu__item_decor_elem.css');
+@import url('../blocks/menu/__cart/menu__cart.css');
+@import url('../blocks/menu/__cart-link/menu__cart-link.css');
+@import url('../blocks/menu/__link/menu__link.css');
+
+@import url('../blocks/js-chasto/js-chasto.css');
+
+@import url('../blocks/chasto/chasto.css');
+@import url('../blocks/chasto/__title/chasto__title.css');
+@import url('../blocks/chasto/__slider/chasto__slider.css');
+@import url('../blocks/chasto/__slider-button/chasto__slider-button.css');
+@import url('../blocks/chasto/__item/chasto__item.css');
+@import url('../blocks/chasto/__img/chasto__img.css');
+@import url('../blocks/chasto/__opisanie/chasto__opisanie.css');
+@import url('../blocks/chasto/__subtitle/chasto__subtitle.css');
+@import url('../blocks/chasto/__subopisanie/chasto__subopisanie.css');
+@import url('../blocks');
+@import url('../blocks');

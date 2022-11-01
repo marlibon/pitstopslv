@@ -88,7 +88,7 @@ let chasto = base.filter(obj => obj.chasto == true) // собираем в ма�
 let chasto_slider = ''; // 
 for (let i = 0; i< chasto.length; i++  )  {
 
-chasto_slider += '<article data-id="' + chasto[i].id + '" class="chastoItem"><img src="' + chasto[i].img + '" alt="' + chasto[i].description + '" class="chasto__img"><div class="chasto__opisanie"><h3 class="chasto__subtitle">' + chasto[i].name + '</h3><div class="chasto__subopisanie">от ' + chasto[i].cost + ' руб.</div></div></article>';
+chasto_slider += '<article data-id="' + chasto[i].id + '" class="chasto__item"><img src="' + chasto[i].img + '" alt="' + chasto[i].description + '" class="chasto__img"><div class="chasto__opisanie"><h3 class="chasto__subtitle">' + chasto[i].name + '</h3><div class="chasto__subopisanie">от ' + chasto[i].cost + ' руб.</div></div></article>';
 }
 document.getElementById('js-chasto').innerHTML = chasto_slider;
 

@@ -11,7 +11,7 @@ widthJsChasto = Math.floor(widthJsChasto);// округлили до запят�
 let chastoSlider = document.getElementsByClassName('chasto__slider'); // у класса chasto__slider вытащили все CSS свойства 
 let widthChastoSlider = chastoSlider[0].getBoundingClientRect().width; // это ширина дива chastoSlider, чтобы использовать при отключении правой кнопки слайдера
 widthChastoSlider = Math.floor(widthChastoSlider); // округлили до запятых
-let chastoItem = document.getElementsByClassName('chastoItem'); // у идентификататора chastoitem вытащили все CSS свойства
+let chastoItem = document.getElementsByClassName('chasto__item'); // у идентификататора chasto__item вытащили все CSS свойства
 let widthСhastoItem = chastoItem[0].getBoundingClientRect().width; // создали переменную, куда сохранили фактическую ширину дива chasto_item - это карточка товара по сути (именно на эту ширину будем двигать слайдер при нажатии кнопок)
 widthСhastoItem = Math.floor(widthСhastoItem);// округлили до запятых
 

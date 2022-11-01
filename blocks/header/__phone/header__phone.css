@@ -1,0 +1,25 @@
+.header__phone {
+    display: block;
+    margin-left: 60px;
+    padding-left: 35px;
+    position: relative;
+    font-size: 26px;
+    color: #434343;
+    text-decoration: none;
+    font-weight: 600;
+}
+.header__phone:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background-image: url(../images/phone-icon.svg);
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header__phone:hover {
+    border-radius: 15px;
+    box-shadow: #ffe600 0px 4px 12px -6px;
+}

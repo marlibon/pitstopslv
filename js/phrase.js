@@ -16,11 +16,11 @@ let phrases = [
     return arr[randIndex];
   }
   
-  let phrase = document.querySelector('.phrase');
+  let phrase = document.querySelector('.header__phrase');
   
   setInterval(function () {
     let randomElement = getRandomElement(phrases);
-    phrase.innerHTML = '<div class="phrase-animation">' + randomElement.text + '</div>';
+    phrase.innerHTML = '<div class="header__phrase-animation">' + randomElement.text + '</div>';
   }, 4000);
 
   
