@@ -7,7 +7,7 @@ function modal(id) {
 
 
 
-
+/*
 ClassModalContent += '<img src="' + base[id].img + '" alt="' + base[id].description + '" id="modalImg" class="modal__img">'
 ClassModalContent += '<div class="modal__description">'
 ClassModalContent += '    <h3 class="modal__title">' + base[id].name + '</h3>'
@@ -30,6 +30,30 @@ ClassModalContent += '    </div>'
 ClassModalContent += '    <div class="modal__footer">'
 ClassModalContent += '        <div class="modal__price">от ' + base[id].cost + 'руб.</div>'
 ClassModalContent += '        <div class="modal__button">Выбрать</div></div></div>';
+*/
+ClassModalContent = `<img src="${base[id].img}" alt="${base[id].description}" id="modalImg" class="modal__img">
+<div class="modal__description">
+    <h3 class="modal__title">${base[id].name}</h3>
+    <p class="modal__ves">${base[id].ves}г</p>
+    <p class="modal__opisanie">${base[id].description}</p>
+    <div class="modal__razmer">
+        <label for="small" class="modal__razmer_label">
+            <input type="radio" name="razmer" id="small" class="modal__razmer_radio" value="small" onclick="choiceRazmer('small')">
+                <span class="modal__razmer_text">Маленькая</span>
+        </label>
+        <label for="medium" class="modal__razmer_label">
+            <input type="radio" name="razmer" id="medium" class="modal__razmer_radio" value="medium" onclick="choiceRazmer('medium')" checked>
+                <span class="modal__razmer_text">Средняя</span>
+        </label>
+        <label for="big" class="modal__razmer_label">
+            <input type="radio" name="razmer" id="big" class="modal__razmer_radio" value="big" onclick="choiceRazmer('big')">
+                <span class="modal__razmer_text">Большая</span>
+        </label>
+    </div>
+    <div class="modal__footer">
+        <div class="modal__price">от ${base[id].cost} руб.</div>
+        <div class="modal__button">Выбрать</div></div></div>`;
+
     return [ClassModal.innerHTML = ClassModalContent, ClassModal.classList.add('js-active'),ClassOverlay[0].classList.add('js-active')]
 }
 

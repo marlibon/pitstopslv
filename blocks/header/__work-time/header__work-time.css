@@ -9,7 +9,7 @@
 .header__work-time:before {
     content: '';
     position: absolute;
-    background-image: url(../images/clock-icon.svg);
+    background-image: url(../../../images/clock-icon.svg);
     top: 7px;
     width: 26px;
     height: 26px;

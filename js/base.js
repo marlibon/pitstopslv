@@ -88,7 +88,14 @@ let chasto = base.filter(obj => obj.chasto == true) // собираем в ма�
 let chasto_slider = ''; // 
 for (let i = 0; i< chasto.length; i++  )  {
 
-chasto_slider += '<article data-id="' + chasto[i].id + '" class="chasto__item"><img src="' + chasto[i].img + '" alt="' + chasto[i].description + '" class="chasto__img"><div class="chasto__opisanie"><h3 class="chasto__subtitle">' + chasto[i].name + '</h3><div class="chasto__subopisanie">от ' + chasto[i].cost + ' руб.</div></div></article>';
+chasto_slider += `
+<article data-id="${chasto[i].id}" class="chasto__item">
+    <img src="${chasto[i].img}" alt="${chasto[i].description}" class="chasto__img">
+    <div class="chasto__opisanie">
+        <h3 class="chasto__subtitle">${chasto[i].name}</h3>
+        <div class="chasto__subopisanie">от ${chasto[i].cost} руб.</div>
+    </div>
+</article>`;
 }
 document.getElementById('js-chasto').innerHTML = chasto_slider;
 
@@ -103,7 +110,16 @@ function tipaeda (nazvanie) {
     let codehtml = '';
     for (let i = 0; i< tipeda.length; i++  )  {
 
-        codehtml += '<article class="kartochka" data-id="' + tipeda[i].id + '"><img src="' + tipeda[i].img + '" alt="' + tipeda[i].description + '" class="kartochka__img"><h3 class="kartochka__title">' + tipeda[i].name + '</h3><p class="kartochka__opisanie">' + tipeda[i].description + '</p><div class="kartochka__footer"><p class="kartochka__price">от ' + tipeda[i].cost + 'руб.</p><button class="kartochka__button">Выбрать</button></div></article>';
+        codehtml += `
+        <article class="kartochka" data-id="${tipeda[i].id}">
+            <img src="${tipeda[i].img}" alt="${tipeda[i].description}" class="kartochka__img">
+            <h3 class="kartochka__title">${tipeda[i].name}</h3>
+            <p class="kartochka__opisanie">${tipeda[i].description}</p>
+            <div class="kartochka__footer">
+                <p class="kartochka__price">от ${tipeda[i].cost}руб.</p>
+                <button class="kartochka__button">Выбрать</button>
+            </div>
+        </article>`;
         }
         return codehtml;
 }

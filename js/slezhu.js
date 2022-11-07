@@ -11,7 +11,7 @@ function sledimTovarModal (nameId) {
              }); // end click
     }); //end foreach
 };
-sledimTovarModal('chastoItem'); //следим за ссылками на товар на всех дивах, где есть класс chastoItem
+sledimTovarModal('chasto__item'); //следим за ссылками на товар на всех дивах, где есть класс chastoItem
 sledimTovarModal('kartochka'); //аналогично
 
 /* следим за ссылками на формы фидбека */
