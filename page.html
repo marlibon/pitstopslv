@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<form>
+<input type="text" id="fname" name="fname" placeholder="fullname" value="test">
+<input type="text" id="country" name="country" placeholder="country" value="test">
+  <button id="myBtn" type="submit">Send</button>
+</form>
+    
+    <script>
+    document.getElementById("myBtn").addEventListener("click", function(e) {
+    e.preventDefault(); 
+    
+    var fname = document.querySelector('input[name="fname"]').value;
+    var country = document.querySelector('input[name="country"]').value;
+    
+    var message = `Fullname: ${fname} \n Country: ${country} `;
+    
+    var token = "5506734715:AAGYKstSIFt0GGWmthQ8_ScDOqHnQmAbVtU";
+    var chatId = -1001698638520;
+    var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${message}&parse_mode=html`;
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+    oReq.responseType = 'json'
+    oReq.send();
+    
+
+   //alert("Message sent");
+   oReq.onreadystatechange = function() {
+    if (oReq.readyState == XMLHttpRequest.DONE) {
+        console.log(JSON.stringify(oReq.response.result));
+    }
+}
+    }); 
+    </script>
+</body>
+</html>

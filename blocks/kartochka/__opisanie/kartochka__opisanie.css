@@ -1,0 +1,9 @@
+.kartochka__opisanie {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(92, 99, 112);
+    font-weight: 400;
+}

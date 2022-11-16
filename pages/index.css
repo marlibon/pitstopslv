@@ -33,5 +33,34 @@
 @import url('../blocks/chasto/__opisanie/chasto__opisanie.css');
 @import url('../blocks/chasto/__subtitle/chasto__subtitle.css');
 @import url('../blocks/chasto/__subopisanie/chasto__subopisanie.css');
+
+@import url('../blocks/products/products.css');
+@import url('../blocks/products/__title/products__title.css');
+@import url('../blocks/products/__items/products__items.css');
+
+@import url('../blocks/kartochka/kartochka.css');
+@import url('../blocks/kartochka/__img/kartochka__img.css');
+@import url('../blocks/kartochka/__title/kartochka__title.css');
+@import url('../blocks/kartochka/__opisanie/kartochka__opisanie.css');
+@import url('../blocks/kartochka/__footer/kartochka__footer.css');
+@import url('../blocks/kartochka/__price/kartochka__price.css');
+@import url('../blocks/kartochka/__button/kartochka__button.css');
+
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/footer/__links/footer__links.css');
+@import url('../blocks/footer/__column/footer__column.css');
+@import url('../blocks/footer/__link/footer__link.css');
+
+@import url('../blocks/modal/modal.css');
+@import url('../blocks/modal/__cross/modal__cross.css');
 @import url('../blocks');
 @import url('../blocks');
+@import url('../blocks');
+
+
+@import url('../blocks/form-edit-profile/form-edit-profile.css');
+@import url('../blocks/form-edit-profile/__input/form-edit-profile__input.css');
+@import url('../blocks/form-edit-profile/__submit-btn/form-edit-profile__submit-btn.css');
+@import url('../blocks/form-edit-profile/__input/_type_activity/form-edit-profile__input_type_activity.css');
+
+@import url('../blocks//js-active/js-active.css');
