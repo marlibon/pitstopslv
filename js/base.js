@@ -97,7 +97,7 @@ chasto_slider += `
     </div>
 </article>`;
 }
-document.getElementById('js-chasto').innerHTML = chasto_slider;
+document.getElementById('js-chasto').insertAdjacentHTML('afterBegin', chasto_slider);
 
 
 // функция поиска по имени свойства в массиве let obj = base.find(o => o.chasto === true);

@@ -10,6 +10,7 @@ function sledimTovarModal (nameId) {
              modal(dataId); // запускаю функцию открытия модального окна карточки товара по id 
              }); // end click
     }); //end foreach
+    
 };
 sledimTovarModal('chasto__item'); //следим за ссылками на товар на всех дивах, где есть класс chastoItem
 sledimTovarModal('kartochka'); //аналогично

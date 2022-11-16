@@ -37,42 +37,7 @@
         <h2 class="chasto__title">Часто заказывают</h2>
         <div class="chasto__slider"> 
           <div id="js-chasto">
-          <article class="chasto__item">
-            <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
-            <div class="chasto__opisanie">
-              <h3 class="chasto__subtitle">Название пиццы</h3>
-              <div class="chasto__subopisanie">от 289 руб.
-
-              </div>
-            </div>
-          </article>
-          <article class="chasto__item">
-            <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
-            <div class="chasto__opisanie">
-              <h3 class="chasto__subtitle">Название пиццы</h3>
-              <div class="chasto__subopisanie">от 289 руб.
-
-              </div>
-            </div>
-          </article>
-          <article class="chasto__item">
-            <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
-            <div class="chasto__opisanie">
-              <h3 class="chasto__subtitle">Название пиццы</h3>
-              <div class="chasto__subopisanie">от 289 руб.
-
-              </div>
-            </div>
-          </article>
-          <article class="chasto__item">
-            <img src="./images/pizza-myasnaya.png" alt="описание часто заказываемого товара" class="chasto__img">
-            <div class="chasto__opisanie">
-              <h3 class="chasto__subtitle">Название пиццы</h3>
-              <div class="chasto__subopisanie">от 289 руб.
-
-              </div>
-            </div>
-          </article>
+          <!-- сюда загрузятся актуальные часто заказываемые товары через JS -->
         </div>
         <a class="chasto__slider-button chasto__slider-button-prev" href="#">
           <img src="./images/slider-rev.png" alt="" class="chasto__slider-button-img">
@@ -82,44 +47,12 @@
         </a>
       </div>
       </section>
-      <section class="products" id="js-pizza">
+      <section class="products">
         <h2 class="products__title">Пицца</h2>
-        <article class="kartochka" data-id="1">
-          <img src="./images/pizza-example.png" alt="описание товара" class="kartochka__img">
-          <h3 class="kartochka__title">Название пиццы</h3>
-          <p class="kartochka__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
-          <div class="kartochka__footer">
-            <p class="kartochka__price">от 416руб.</p>
-            <button class="kartochka__button">Выбрать</button>
-          </div>
-        </article>
-        <article class="kartochka">
-          <img src="./images/pizza-example.png" alt="описание товара" class="kartochka__img">
-          <h3 class="kartochka__title">Название пиццы</h3>
-          <p class="kartochka__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
-          <div class="kartochka__footer">
-            <p class="kartochka__price">от 416руб.</p>
-            <button class="kartochka__button">Выбрать</button>
-          </div>
-        </article>
-        <article class="kartochka">
-          <img src="./images/pizza-example.png" alt="описание товара" class="kartochka__img">
-          <h3 class="kartochka__title">Название пиццы</h3>
-          <p class="kartochka__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
-          <div class="kartochka__footer">
-            <p class="kartochka__price">от 416руб.</p>
-            <button class="kartochka__button">Выбрать</button>
-          </div>
-        </article>
-        <article class="kartochka">
-          <img src="./images/pizza-example.png" alt="описание товара" class="kartochka__img">
-          <h3 class="kartochka__title">Название пиццы</h3>
-          <p class="kartochka__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
-          <div class="kartochka__footer">
-            <div class="kartochka__price">от 416руб.</div>
-            <div class="kartochka__button">Выбрать</div>
-          </div>
-        </article>
+        <div class="products__items" id="js-pizza">
+          <!-- сюда загрузятся товары из раздела пицца -->
+        </div>
+        
       </section>
     </main>
     <footer class="footer">
@@ -182,5 +115,6 @@
       <script src="./js/modal.js"></script>
       <script src="./js/slezhu.js"></script>      
       <script src="./js/slider.js"></script>
+      <script src="./js/feedback.js"></script>
 </body>
 </html>
