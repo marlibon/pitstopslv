@@ -1,17 +1,15 @@
-/* предлагаю пустую корзину немного смазать, чтобы не видно было особо, а когда добавил товар, сделать ярким и немного анимированным, чтобы не забыли оформить заказ до конца */
 .menu__cart {
-    margin: 0;
-    padding: 0;
-    width: 20%;
-    background-color: #ffe600;
-    border-radius: 15px;
-    height: 54px;
-    border: 3px dotted #c5b30c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: scaleCart 5s linear 3s infinite;
-}
-.menu__cart {
-    opacity: 0.7; /* если нет товаров в корзине */
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #ffe600;
+  border-radius: 15px;
+  height: 54px;
+  border: 3px dotted #c5b30c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.7;
 }

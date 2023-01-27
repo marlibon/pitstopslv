@@ -1,0 +1,28 @@
+.cart__container {
+  width: 90%;
+  max-width: 1150px;
+  min-height: 410px;
+  z-index: 999;
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  transition: opacity 150ms ease 0s, transform;
+  position: relative;
+  cursor: default;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  /*flex-direction: row-reverse;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;*/
+}
+@media screen and (max-width: 1024px) {
+  .cart__container {
+    width: 90%;
+  }
+}

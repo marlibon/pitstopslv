@@ -1,17 +1,17 @@
 
-let next = document.querySelector('.chasto__slider-button-next');
-let prev = document.querySelector('.chasto__slider-button-prev');
+let next = document.querySelector('.product-popular__slider-button-next');
+let prev = document.querySelector('.product-popular__slider-button-prev');
 
 
 function sliderOptions() {
-let jsChasto = document.getElementById('js-chasto'); // у идентификататора js-chasto вытащили все CSS свойства 
+let jsChasto = document.querySelector('.product-popular__container'); // у идентификататора js-chasto вытащили все CSS свойства 
 let widthJsChasto = jsChasto.getBoundingClientRect().width; // создали переменную, куда сохранили фактическую ширину дива (это нужно, чтобы правая кнопка слайдера выключалась, когда мы достигнем лимита)
 widthJsChasto = Math.floor(widthJsChasto);// округлили до запятых
 
-let chastoSlider = document.getElementsByClassName('chasto__slider'); // у класса chasto__slider вытащили все CSS свойства 
+let chastoSlider = document.getElementsByClassName('product-popular__slider'); // у класса chasto__slider вытащили все CSS свойства 
 let widthChastoSlider = chastoSlider[0].getBoundingClientRect().width; // это ширина дива chastoSlider, чтобы использовать при отключении правой кнопки слайдера
 widthChastoSlider = Math.floor(widthChastoSlider); // округлили до запятых
-let chastoItem = document.getElementsByClassName('chasto__item'); // у идентификататора chasto__item вытащили все CSS свойства
+let chastoItem = document.getElementsByClassName('product-popular__item'); // у идентификататора chasto__item вытащили все CSS свойства
 let widthСhastoItem = chastoItem[0].getBoundingClientRect().width; // создали переменную, куда сохранили фактическую ширину дива chasto_item - это карточка товара по сути (именно на эту ширину будем двигать слайдер при нажатии кнопок)
 widthСhastoItem = Math.floor(widthСhastoItem);// округлили до запятых
 
@@ -35,7 +35,7 @@ next.addEventListener('click', function () {
   else {
   let newtranslate = parseInt(inttranslate)-inttranslate[3]; //  двигаем блок налево на 150
   
-  return [document.getElementById('js-chasto').style.translate = newtranslate + 'px 0',
+  return [document.querySelector('.product-popular__container').style.translate = newtranslate + 'px 0',
   prev.style.display = "flex"] // обернули в массив сразу 2 действия. добавить свойство для translate и при этом начать показывать левую кнопку прокрутки
   }
   });
@@ -48,7 +48,7 @@ prev.addEventListener('click', function () {
     }
     else {
     let newtranslate = inttranslate[0]+inttranslate[3]; // parseInt преобразует строку в число, двигаем блок направо 
-    return [document.getElementById('js-chasto').style.translate = newtranslate + 'px 0',
+    return [document.querySelector('.product-popular__container').style.translate = newtranslate + 'px 0',
     next.style.display = "flex"]
     }
     });  

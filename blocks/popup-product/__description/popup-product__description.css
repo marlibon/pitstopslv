@@ -1,0 +1,8 @@
+.popup-product__description {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 410px;
+}

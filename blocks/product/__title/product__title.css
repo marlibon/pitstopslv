@@ -1,0 +1,13 @@
+.product__title {
+    margin: 8px 0px 8px 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+
+}

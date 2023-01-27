@@ -1,0 +1,8 @@
+.popup-product__img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  padding: 40px;
+  transition: all .5s;
+  }
+  

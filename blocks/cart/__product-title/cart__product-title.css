@@ -1,0 +1,10 @@
+.cart__product-title {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    grid-area: title;
+    align-self: end;
+    justify-self: start;
+}

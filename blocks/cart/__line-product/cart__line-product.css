@@ -1,0 +1,12 @@
+.cart__line-product {
+    display: grid;
+    grid-template-columns: minmax(40px, 80px) minmax(auto,200px);
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    grid-template-areas:
+        "img title"
+        "img weight";
+    align-items: center;
+    row-gap: 8px;
+    column-gap: 12px;
+}

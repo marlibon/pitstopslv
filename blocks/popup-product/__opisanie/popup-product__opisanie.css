@@ -1,0 +1,9 @@
+.popup-product__opisanie {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: left;
+  }

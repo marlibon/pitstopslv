@@ -1,0 +1,9 @@
+.quantity {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 40px;
+    padding: 40px 0 40px;
+    align-self: center;
+    align-items: center;
+    box-sizing: border-box;
+}

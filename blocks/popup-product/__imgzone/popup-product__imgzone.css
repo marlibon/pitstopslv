@@ -1,0 +1,6 @@
+.popup-product__imgzone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }

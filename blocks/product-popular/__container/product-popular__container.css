@@ -1,0 +1,5 @@
+.product-popular__container {
+  display: flex;
+  translate: 0px 0;
+  transition: translate 0.5s ease-in-out;
+}

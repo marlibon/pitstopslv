@@ -1,0 +1,6 @@
+.cart__product-img {
+    width: auto;
+    height: 70px;
+    grid-area: img;
+
+}

@@ -1,0 +1,15 @@
+.cart__product-trash {
+  margin: 0;
+  padding: 0;
+  height: 42px;
+  width: 42px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: none;
+  transition: 0.2s all;
+  align-self: center;
+}
+.cart__product-trash:hover {
+  background-color: #d4d4dd;
+}

@@ -1,58 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пит Стоп Салават</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Пит Стоп Салават</title>
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./pages/index.css">
-</head>
-<body class="page">
-      <header class="header">
-        <div class="logo">
-            <a href="/" class="logo__link"><img src="./images/logo__img.png" alt="логотип компании Пит Стоп Салават" class="logo__img"></a>
-        </div>
-        <div class="header__info">
-            <p class="header__description">кафе <span class="header__brand"> ПиТ <span class="header_color_red">StoP </span></span> в Салавате это:</p>
-            <p class="header__description header_textdecoration_underline"><span class="header__phrase">сочные бургеры</span></p>
-        </div>
-        <div class="header__work-time">24/7</div>
-        <a href="tel:+79178004477" class="header__phone" title="позвонить в ПитСтоп" >+7 (917) 800 44 77</a>
-      </header>
-      <nav class="menu">
-        <ul class="menu__line">
-          <li class="menu__item"><a href="" class="menu__link" title="">Пицца</a></li>
-          <li class="menu__item"><a href="" class="menu__link" title="">Бургеры</a></li>
-          <li class="menu__item"><a href="" class="menu__link" title="">Выпечка</a></li>
-          <li class="menu__item"><a href="" class="menu__link" title="">Напитки</a></li>
-          <li class="menu__item menu__item_decor_elem"><a href="" class="menu__link" title="" >доставка</a></li>
-          <li class="menu__item menu__item_decor_elem"><a href="" class="menu__link" title="" >контакты</a></li>
+  <body class="page">
+    <header class="header">
+      <div class="logo">
+        <a href="/" class="logo__link"
+          ><img
+            src="./images/logo__img.png"
+            alt="логотип компании Пит Стоп Салават"
+            class="logo__img"
+        /></a>
+      </div>
+      <div class="header__info">
+        <p class="header__description">
+          кафе
+          <span class="header__brand">
+            ПиТ <span class="header_color_red">StoP </span></span
+          >
+          в Салавате это:
+        </p>
+        <p class="header__description header_textdecoration_underline">
+          <span class="header__phrase">сочные бургеры</span>
+        </p>
+      </div>
+      <div class="header__work-time">24/7</div>
+      <a
+        href="tel:+79178004477"
+        class="header__phone"
+        title="позвонить в ПитСтоп"
+        >+7 (917) 800 44 77</a
+      >
+    </header>
+    <nav class="menu">
+      <ul class="menu__line">
+        <li class="menu__item">
+          <a href="" class="menu__link" title="">Пицца</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" title="">Бургеры</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" title="">Выпечка</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" title="">Напитки</a>
+        </li>
+        <li class="menu__item menu__item_decor_elem">
+          <a href="" class="menu__link" title="">доставка</a>
+        </li>
+        <li class="menu__item menu__item_decor_elem">
+          <a href="" class="menu__link" title="">контакты</a>
+        </li>
       </ul>
-   
-    <div class="menu__cart"><a href="" class="menu__cart-link">Корзина</a></div>
+
+      <div class="menu__cart">
+        <a href="#" class="menu__cart-link">Корзина</a>
+        <span class="menu__cart-quantity"></span>
+      </div>
     </nav>
     <main class="main">
-      <section class="chasto">
-        <h2 class="chasto__title">Часто заказывают</h2>
-        <div class="chasto__slider"> 
-          <div id="js-chasto">
-          <!-- сюда загрузятся актуальные часто заказываемые товары через JS -->
+      <section class="product-popular">
+        <h2 class="products__title products__title_medium">Часто заказывают</h2>
+        <div class="product-popular__slider">
+          <div class="product-popular__container">
+            <!-- сюда загрузятся актуальные часто заказываемые товары через JS -->
+          </div>
+          <a class="product-popular__slider-button product-popular__slider-button-prev" href="#">
+            <img
+              src="./images/slider-rev.png"
+              alt=""
+              class="product-popular__slider-button-img"
+            />
+          </a>
+          <a class="product-popular__slider-button product-popular__slider-button-next" href="#">
+            <img
+              src="./images/slider-next.png"
+              alt=""
+              class="product-popular__slider-button-img"
+            />
+          </a>
         </div>
-        <a class="chasto__slider-button chasto__slider-button-prev" href="#">
-          <img src="./images/slider-rev.png" alt="" class="chasto__slider-button-img">
-        </a>
-        <a class="chasto__slider-button chasto__slider-button-next" href="#">
-          <img src="./images/slider-next.png" alt="" class="chasto__slider-button-img">
-        </a>
-      </div>
       </section>
       <section class="products">
         <h2 class="products__title">Пицца</h2>
-        <div class="products__items" id="js-pizza">
+        <div class="products__items product__container">
           <!-- сюда загрузятся товары из раздела пицца -->
         </div>
-        
       </section>
     </main>
     <footer class="footer">
@@ -64,57 +104,203 @@
           <li><a href="#" class="footer__link">Контакты</a></li>
           <li><a href="#" class="footer__link">Акции</a></li>
           <li><a href="#" class="footer__link">Вакансии</a></li>
-
         </ul>
         <ul class="footer__column">
           <li>Этот сайт</li>
-          <li><a href="#" class="footer__link feedback" data-name="error">Нашли ошибку?</a></li>
-          <li><a href="#" class="footer__link feedback" data-name="letter">Письмо директору</a></li>
-          <li><a href="#" class="footer__link feedback" data-name="site">Хочу такой же сайт!</a></li>
+          <li>
+            <a href="#" class="footer__link feedback-link" data-name="error"
+              >Нашли ошибку?</a
+            >
+          </li>
+          <li>
+            <a href="#" class="footer__link feedback-link" data-name="letter"
+              >Письмо директору</a
+            >
+          </li>
+          <li>
+            <a href="#" class="footer__link feedback-link" data-name="site"
+              >Хочу такой же сайт!</a
+            >
+          </li>
         </ul>
-
       </div>
     </footer>
     <!-- модальные окна -->
-    <div class="modal" id="js-modal">
-      
-        <div class="modal__imgzone">
-          
-          <img src="./images/pizza-example.png" alt="описание товара" id="modalImg" class="modal__img">
+    <!-- попап продукта -->
+    <section class="popup popup-product">
+      <div class="popup-product__container">
+        <img
+        src="./images/button-close.svg"
+        alt="кнопка закрытия"
+        class="popup__close"
+      />
+      <div class="popup-product__description">
+        <div class="popup-product__content">
+          <h3 class="popup-product__title">Название пиццы</h3>
+          <p class="popup-product__weight">840 г</p>
+          <p class="popup-product__opisanie">
+            Пастрами из индейки, острая чоризо, пикантная пепперони, бекон,
+            моцарелла, фирменный томатный соус
+          </p>
+          <form name="properties" class="popup-product__properties">
+          </form>
+          <form id="quantity" name="quantity" class="popup-product__quantity quantity">
+            <p class="quantity__text">количество: </p>
+            <button class="quantity__btn quantity__btn_minus" disabled>-</button>
+            <input type="text" id="quantity" name="quantity" class="quantity__input" value="1" maxlength="2" min="1" max="99" readonly>
+            <button class="quantity__btn quantity__btn_plus">+</button>
+          </form>
         </div>
-        <div class="modal__description">
-          <h3 class="modal__title">Название пиццы</h3>
-          <p class="modal__ves">840 г</p>
-          <p class="modal__opisanie">Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус</p>
-          <div class="modal__razmer">
-            <label for="small" class="modal__razmer_label" onclick="choiceRazmer('small')">
-            <input type="radio" name="razmer" id="small" class="modal__razmer_radio" value="small">
-            <span class="modal__razmer_text">Маленькая</span>
-            </label>
-            <label for="medium" class="modal__razmer_label" onclick="choiceRazmer('medium')">
-              <input type="radio" name="razmer" id="medium" class="modal__razmer_radio" value="medium" checked>
-              <span class="modal__razmer_text">Средняя</span>
-              </label>
-              <label for="big" class="modal__razmer_label" onclick="choiceRazmer('big')">
-                <input type="radio" name="razmer" id="big" class="modal__razmer_radio" value="big" >
-                <span class="modal__razmer_text">Большая</span>
-                </label>
-          </div>
-          <div class="modal__footer">
-            <div class="modal__price">от 416руб.</div>
-            <div class="modal__button">Выбрать</div>
-          </div>
+        <button class="popup-product__add-cart" data-id="">Добавить в корзину за 99р.</button>
+      </div>
+      <div class="popup-product__imgzone">
+        <img
+          src="./images/pizza-example.png"
+          alt="описание товара"
+          class="popup-product__img"
+        />
+      </div>
+      </div>
+
+    </section>
+    <!-- попап корзины -->
+    <section class="popup popup-cart">
+      <div class="cart__container">
+        <img
+        src="./images/button-close.svg"
+        alt="кнопка закрытия"
+        class="popup__close"
+      />
+      <section class="cart">
+        <h3 class="cart__title"></h3>
+        <article class="cart__line cart__line_main">
+          <p class="cart__product-text cart__product-text_small">товар</p>
+          <p class="cart__product-text cart__product-text_small">цена за ед.</p>
+          <p class="cart__product-text cart__product-text_small">количество</p>
+          <p class="cart__product-text cart__product-text_small">стоимость</p>
+          <p class="cart__product-text cart__product-text_small">удалить</p>
+        </article>
+    
+        <div class="cart__table">
+
         </div>
+        <summary class="cart__line cart__line_total">
+          <p class="cart__product-text cart__product-text_small"></p>
+          <p class="cart__product-text cart__product-text_small"></p>
+          <p class="cart__product-text cart__product-text_small ">всего на сумму:</p>
+          <p class="cart__product-text cart__product-text_big">0 руб.</p>
+          <button class="cart__clear-btn">очистить</button>
+        </summary>
+    
+      </section>
 
-   </div>
-  <div class="modal" id="modalFeedBack"></div>
-   <a href="#" onclick="closeButton(); return false;" class="overlay"></a>
+    </section>
 
-      <script src="./js/phrase.js"></script>
-      <script src="./js/base.js"></script>
-      <script src="./js/modal.js"></script>
-      <script src="./js/slezhu.js"></script>      
-      <script src="./js/slider.js"></script>
-      <script src="./js/feedback.js"></script>
-</body>
+    <!-- шаблоны -->
+    <template id="template-product-popular">
+    <article data-id="" class="product-popular__item">
+      <img src="" alt="" class="product-popular__img">
+      <div class="product-popular__content">
+          <h3 class="product-popular__title"></h3>
+          <p class="product-popular__price"></p>
+      </div>
+  </article>
+  </template>
+      <!-- шаблон продукта -->
+    <template id="template-product">
+      <article class="product" data-id="">
+        <img src="" alt="" class="product__img" />
+        <h3 class="product__title"></h3>
+        <p class="product__description"></p>
+        <div class="product__footer">
+          <p class="product__price"></p>
+          <button class="product__button">Выбрать</button>
+        </div>
+      </article>
+    </template>
+    <!-- шаблон для таблицы корзины-->
+    <template id="template-cart">
+     <article class="cart__line cart__line_product">
+      <div class="cart__line-product">
+        <img src="http://127.0.0.1:5500/images/mozarella.jpg" alt="" class="cart__product-img">
+        <h4 class="cart__product-title">пицца Деревенская</h4>
+        <p class="cart__product-weight">вес: 700г (средняя)</p>
+      </div>
+      <span class="cart__product-text cart__product-text_price">445 руб.</span>
+      <div class="quantity">
+        <div class="popup-product__quantity quantity">
+          <button class="quantity__btn quantity__btn_minus">-</button>
+          <input type="text" id="quantity" name="quantity" class="quantity__input" value="1" maxlength="2" min="1" max="99" readonly>
+          <button class="quantity__btn quantity__btn_plus">+</button>
+        </div>
+      </div>
+      <span class="cart__product-text cart__product-text_cost">1200 руб.</span>
+      <button class="cart__product-trash"> &#10006; </button>
+    </article>
+  </template>
+
+     <!-- шаблон попапа обратной связи -->
+    <template id="template-feedback">
+      <img
+        src="./images/button-close.svg"
+        alt="кнопка закрытия"
+        class="popup__cross"
+      />
+      <h3 class="modal__title"></h3>
+      <p></p>
+      <form name="feedback" action="/" class="feedback">
+        <input
+          type="text"
+          minlength="2"
+          maxlength="30"
+          required
+          placeholder="ваше имя"
+          class="feedback__input"
+          id="feedback__input_type_name"
+          name="type_name"
+        />
+        <span
+          class="feedback__input_error feedback__input_type_name-error"
+        ></span>
+        <input
+          type="tel"
+          minlength="2"
+          maxlength="30"
+          required
+          type="text"
+          placeholder="контакты (whatsapp/telegram)"
+          class="feedback__input"
+          id="feedback__input_type_number"
+          name="type_number"
+        />
+        <span
+          class="feedback__input_error feedback__input_type_number-error"
+        ></span>
+        <input
+          type="text"
+          placeholder="ваше сообщение"
+          class="feedback__input feedback__input_type_activity"
+          id="feedback__input_type_activity"
+          name="type_activity"
+          minlength="2"
+          maxlength="3000"
+          required
+        />
+        <span
+          class="feedback__input_error feedback__input_type_activity-error"
+        ></span>
+        <button type="submit" class="feedback__submit-btn">Отправить</button>
+      </form>
+    </template>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/components/FormValidator.js"></script>
+    <script src="./js/feedback.js"></script>
+    <script src="./js/modules/const.js"></script>
+    <script src="./js/phrase.js"></script>
+    <script src="./js/modules/modal.js"></script>
+    <script src="./js/modules/listener.js"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/slider.js"></script>
+  </body>
 </html>

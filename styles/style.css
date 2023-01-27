@@ -13,135 +13,8 @@
   }
 }
 
-/* модальные окна */
-.overlay {
-  /* Скрываем подложку  */
-  opacity: 0;
-  visibility: hidden;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
-  transition: 0.3s all;
-}
 
-/* Стили для модальных окон */
-
-#modal1 {
-  visibility: hidden;
-}
-#modal2 {
-  visibility: hidden;
-}
-.modal {
-  visibility: hidden;
-  opacity: 0;
-  /*width: 990px;
-    height: 610px;*/
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 999;
-  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 30px;
-  background-color: #fff;
-  transition: 0.3s all;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px;
-  box-sizing: border-box;
-  background: rgb(255, 255, 255);
-  border-radius: 20px;
-  transition: opacity 150ms ease 0s, transform;
-  display: flex;
-}
-
-/* для кнопки закрытия */
-
-.modal__cross {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  fill: #fff;
-  cursor: pointer;
-}
-.modal__cross:hover {
-  animation: scale 4s;
-}
-
-.js-active {
-  visibility: visible;
-  opacity: 1;
-}
-.modal__title {
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  line-height: 28px;
-  font-weight: 500;
-}
-.modal__ves {
-  margin: 10px 0 10px 0;
-  padding: 0;
-  color: rgb(92, 99, 112);
-  font-size: 20px;
-  line-height: 20px;
-}
-.modal__imgzone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.modal__img {
-  width: 400px;
-  height: 400px;
-  padding: 50px;
-}
-.modal__description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.modal__opisanie {
-  margin: 0 0 10px 0;
-  padding: 0;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 400;
-  text-align: left;
-}
-.modal__razmer {
-  border-radius: 40px;
-  background-color: rgb(243, 243, 247);
-  height: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  margin: 8px 0px;
-}
-.modal__razmer_label {
-  box-sizing: border-box;
-  border-radius: 9999px;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  transition: color 150ms ease 0s;
-}
-.modal__razmer_radio {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-}
 label,
 input,
 span {
@@ -154,16 +27,23 @@ input[type="radio"] {
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  transition: all 250ms ease 0s;
 }
 input[type="radio"] + span {
-  padding: 5px 25px 5px 25px;
+  padding: 10px;
+  line-height: 40px;
+  transition: all 250ms ease 0s;
+}
+input[type="radio"]:hover + span {
+  color: #242427d0;
+  transition: all 250ms ease 0s;
 }
 input[type="radio"]:checked + span {
   font-weight: 500;
   box-sizing: border-box;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #9c9c9f75;
   border-radius: 9999px;
   color: rgb(0, 0, 0);
-  transition: color 150ms ease 0s;
+  transition: all 250ms ease 0s;
 }

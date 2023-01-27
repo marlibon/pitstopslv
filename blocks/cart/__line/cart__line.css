@@ -1,0 +1,10 @@
+.cart__line {
+    height: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(auto, 292px) repeat(3, 1fr) minmax(auto, 100px);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px dashed #9c9c9f75;
+}

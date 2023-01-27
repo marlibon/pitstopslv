@@ -1,0 +1,15 @@
+.product {
+    width: 260px;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    align-items: center;
+    padding: 0 15px 15px 15px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all .2s;
+
+}
+.product:hover {
+    box-shadow: #a5960c 0px 4px 12px -6px;
+}

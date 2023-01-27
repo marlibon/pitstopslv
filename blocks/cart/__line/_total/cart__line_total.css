@@ -1,0 +1,7 @@
+.cart__line_total {
+    align-items: start;
+    border-bottom: none;
+    height: 40px;
+    display: none;
+
+}
