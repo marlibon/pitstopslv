@@ -1,7 +1,6 @@
 .cart__container {
   width: 90%;
   max-width: 1150px;
-  min-height: 410px;
   z-index: 999;
   text-align: center;
   padding: 30px;

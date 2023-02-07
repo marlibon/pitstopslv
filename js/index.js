@@ -73,6 +73,34 @@ const pizza = new Renderable(
 );
 pizza.renderItems(); // запуск генерации
 
+// БУРГЕРЫ>: создание экземпляра Renderable - вставка текста в контейнер. Внутри - процесс генерации карточек
+const filterProductBurger = base.filter((obj) => obj.type === "Бургеры"); // фильтруем только объекты с пиццей
+const burger = new Renderable(
+  {
+    items: filterProductBurger,
+    renderer: (item) => {
+      const newCard = createCard(item, handleProductClick, selectorProduct, handleAddCard);
+      burger.addItem(newCard);
+    },
+  },
+  '.burger__container'
+);
+burger.renderItems(); // запуск генерации
+
+// Блинчики>: создание экземпляра Renderable - вставка текста в контейнер. Внутри - процесс генерации карточек
+const filterProductBliny = base.filter((obj) => obj.type === "Блины с начинкой"); // фильтруем только объекты с пиццей
+const bliny = new Renderable(
+  {
+    items: filterProductBliny,
+    renderer: (item) => {
+      const newCard = createCard(item, handleProductClick, selectorProduct, handleAddCard);
+      bliny.addItem(newCard);
+    },
+  },
+  '.bliny__container'
+);
+bliny.renderItems(); // запуск генерации
+
 // ЧАСТО ЗАКАЗЫВАЮТ: создание экземпляра Renderable - вставка текста в контейнер. Внутри - процесс генерации карточек
 const filterProductPopular = base.filter((obj) => obj.chasto == true); // фильтруем только объекты c популярными товарами
 const productPopular = new Renderable(
@@ -99,11 +127,10 @@ const productPopup = new Popup(selectorPopupProduct);
 const cartPopup = new Popup(selectorPopupCart);
 
 // создание корзины
-const cart = new Cart('#template-cart');
+const cart = new Cart('#template-cart', buttonCart);
 cart.renderCartQuantity()
 
 // отслеживание клика по корзине
-const buttonCart = document.querySelector('.menu__cart-quantity');
 buttonCart.parentNode.addEventListener('click', (evt) => {
   evt.preventDefault();
   cart.renderCart();
@@ -113,8 +140,6 @@ buttonCart.parentNode.addEventListener('click', (evt) => {
 
 /* 
 проблемы:
-1. вешатель на кнопку очистить
-2. количество брать при добавлении в корзину
-3. верстка попапа корзины
-4. удаление происходит по id, а надо чтобы именно строка удалена была
+
+
 */

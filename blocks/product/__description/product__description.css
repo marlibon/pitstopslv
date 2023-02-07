@@ -1,17 +1,23 @@
 .product__description {
-    margin: 0;
-    text-align: center;
-    width: 100%;
-    font-size: 14px;
-    line-height: 18px;
-    color: rgb(92, 99, 112);
-    font-weight: 400;
-    height: 75px;
-    max-height: 75px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(92, 99, 112);
+  font-weight: 400;
+  min-height: 75px;
+  max-height: 75px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media only screen and (max-width: 767px) {
+  .product__description {
+    overflow: visible;
+    max-height: 120px;
+  }
 }

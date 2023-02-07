@@ -1,8 +1,31 @@
 .header {
-    margin: 0 auto;
+  margin: 0 auto;
+  padding: 20px 0 70px 0;
+  max-height: 90px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 120px minmax(auto, 400px) minmax(auto, 150px) auto minmax(min-content, 300px);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 10px;
+  grid-template-areas:
+    "logo info work-time phone phone"
+    "menu menu menu menu cart";
+  position: relative;
+}
+@media only screen and (max-width: 900px) {
+  .header {
+    padding: 20px 0 50px 0;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .header {
     padding: 20px 0 20px 0;
-    max-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 10px;
+    grid-template-areas:
+      "logo info phone"
+      "menu menu cart";
+  }
 }

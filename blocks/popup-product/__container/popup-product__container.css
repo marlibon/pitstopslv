@@ -12,13 +12,22 @@
   transition: opacity 150ms ease 0s, transform;
   position: relative;
   cursor: default;
-  display: flex;
-  flex-direction: row-reverse;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  display: grid;
+  grid-template-columns: minmax(auto, 480px) minmax(auto, 410px);
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "img title"
+  "img description";
+  justify-items: center;
+  gap: 10px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 700px) {
   .popup-product__container {
     width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "title"
+    "img"
+    "description";
   }
 }

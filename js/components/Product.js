@@ -6,7 +6,7 @@ export class Product {
     this._handleProductClick = handleProductClick; // функция обработки клика
     this._handleAddCard = handleAddCard;
     this._addListenerRenderContentPopup = this._renderContentPopup.bind(this);
-    this._addListenerAddCard = this._addListenerAddCard.bind(this);
+    this._buttonAddCard = this._buttonAddCard.bind(this);
   }
 
   /* ГЕНЕРАЦИЯ ДЛЯ ОСНОВНОЙ СТРАНИЦЫ */
@@ -39,21 +39,20 @@ export class Product {
       ? (this._elementDescription.textContent = this._item.description)
       : "";
     this._elementTitle.textContent = this._item.title;
-    this._elementPrice.textContent = `от ${this._handleMinCostProduct()} руб.`;
+    this._elementPrice.textContent = `от ${this._getMinCost()} руб.`;
   }
 
-  _handleMinCostProduct() {
+  _getMinCost() {
     // функция проверяет продукт на наличие вложенных свойств и вычисляет самую минимальную цену
     this._arrCost = [];
     if (this._item.properties) {
       Object.keys(this._item.properties).forEach((item) => {
         this._arrCost.push(this._item.properties[item].cost);
       });
-      this._minCost = Math.min(...this._arrCost);
+      return Math.min(...this._arrCost);
     } else {
-      this._minCost = this._item.cost;
+      return this._item.cost;
     }
-    return this._minCost;
   }
 
   _setEventListeners() {
@@ -96,7 +95,7 @@ export class Product {
   };
 
 
-  _popupGenerateForm() {
+  _createFormProperties() {
     this._formChangeProperties.classList.add('page_visibility');
     this._formChangeProperties.innerHTML = "";
     Object.keys(this._item.properties).forEach((item, id) => {
@@ -122,20 +121,20 @@ export class Product {
     });
   }
   
-  _addListenerAddCard(evt) {
+  _buttonAddCard(evt) {
     this._handleAddCard(evt, this._selectedProducts, this);
         this._renderContentPopup();
         this._popupQuantityMinus.disabled = 'disabled'
       }
 
-  _addListenerPlusQuontity = (evt) => {
+  _plusQuontity = (evt) => {
     evt.preventDefault();
     ++this._popupQuantityInput.value;
   this._popupQuantityMinus.disabled = ''
   this._renderContentPopup()
 
     }
-  _addListenerMinusQuontity = (evt) => {
+  _minusQuontity = (evt) => {
     evt.preventDefault();
     --this._popupQuantityInput.value;
     this._popupQuantityInput.value >= 2
@@ -147,9 +146,9 @@ export class Product {
 
 
   removeListeners () {
-    this._popupAddCard.removeEventListener('click', this._addListenerAddCard);
-    this._popupQuantityMinus.removeEventListener('click', this._addListenerMinusQuontity);
-    this._popupQuantityPlus.removeEventListener('click', this._addListenerPlusQuontity);
+    this._popupAddCard.removeEventListener('click', this._buttonAddCard);
+    this._popupQuantityMinus.removeEventListener('click', this._minusQuontity);
+    this._popupQuantityPlus.removeEventListener('click', this._plusQuontity);
     this._formChangeProperties.removeEventListener("change", this._addListenerRenderContentPopup);
 
   }
@@ -173,7 +172,7 @@ export class Product {
     this._formInputQuontity = this._popupContainer.querySelector(
       ".popup-product__quantity"
     ); 
-    this._formInputQuontity.reset()
+
     this._popupAddCard = this._popupContainer.querySelector(
       ".popup-product__add-cart"
     );
@@ -187,10 +186,13 @@ export class Product {
       ".quantity__input"
     );
     this._quontity = Number(this._popupQuantityInput.value)
+    
+    this._formInputQuontity.reset()
+    this._popupQuantityMinus.disabled = 'disabled'; // обнуляем счетчик и дизейблим кнопку
 
     //проверка на наличие свойств properties
     if (typeof this._item.properties === "object") {
-      this._popupGenerateForm();
+      this._createFormProperties();
       this._formChangeProperties.addEventListener("change", this._addListenerRenderContentPopup);
       this._formChangeProperties.classList.add('page_visibility');
     } else {
@@ -198,10 +200,10 @@ export class Product {
      }
 
     // установка слушателя на кнопку добавления в корзину
-    this._popupAddCard.addEventListener('click', this._addListenerAddCard)
+    this._popupAddCard.addEventListener('click', this._buttonAddCard)
     // установка слушателя на редактирование количества
-    this._popupQuantityMinus.addEventListener('click', this._addListenerMinusQuontity)
-    this._popupQuantityPlus.addEventListener('click', this._addListenerPlusQuontity)
+    this._popupQuantityMinus.addEventListener('click', this._minusQuontity)
+    this._popupQuantityPlus.addEventListener('click', this._plusQuontity)
     
     this._renderContentPopup();
 

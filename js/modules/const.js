@@ -12,6 +12,7 @@
  const selectorPopupCart = '.popup-cart';
 
  const selectorButtonCart = '.menu__cart';
+ const buttonCart = document.querySelector(".header__cart-quantity");
 
 
 

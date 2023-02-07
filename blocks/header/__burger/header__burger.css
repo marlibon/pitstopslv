@@ -1,0 +1,36 @@
+#header__burger, [for=header__burger] {
+    display: none;
+}
+@media screen and (max-width: 700px) {
+  [for=header__burger]{
+      display: block;
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      right: 7%;
+      top: 27px;
+      color: #000;
+      font-size: 30px;
+      grid-area: burger;
+  }
+  [for=header__burger]::before{
+      content: '☰';
+  }
+
+  #header__burger:checked + label + .menu{
+      display: block;
+      animation: show .1s ease;
+  }
+  #header__burger:checked +[for=header__burger]::before{
+      content: 'X';
+  }
+}
+@keyframes show {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}

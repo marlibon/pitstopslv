@@ -1,4 +1,10 @@
 .products__items {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+@media only screen and (max-width: 579px) {
+  .products__items {
+  }
 }

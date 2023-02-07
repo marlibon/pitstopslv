@@ -4,4 +4,7 @@
     font-size: 30px;
     line-height: 28px;
     font-weight: 500;
+    grid-area: title;
+    justify-self: start;
   }
+  

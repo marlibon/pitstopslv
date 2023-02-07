@@ -2,9 +2,19 @@
     height: 80px;
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(auto, 292px) repeat(3, 1fr) minmax(auto, 100px);
+    grid-template-columns: minmax(auto, 400px) repeat(3, 1fr) minmax(auto, 100px);
     justify-items: center;
     align-items: center;
     justify-content: center;
     border-bottom: 1px dashed #9c9c9f75;
 }
+@media screen and (max-width: 780px) {
+    .cart__line {
+        width: 90%;
+        grid-template-columns: 40% 40% 20%;
+        grid-template-rows: 150px 50px;
+        grid-template-areas: 
+      "product product close"
+      "price quantity cost";
+    }
+  }
