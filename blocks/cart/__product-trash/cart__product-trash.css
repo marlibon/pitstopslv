@@ -13,3 +13,15 @@
 .cart__product-trash:hover {
   background-color: #d4d4dd;
 }
+@media screen and (max-width: 768px) {
+  .cart__product-trash {
+    grid-area: trash;
+    height: auto;
+    grid-template-columns: 16% 60% 16%;
+    grid-template-rows: 70px 50px;
+    grid-template-areas:
+      "product product trash"
+      "price quantity cost";
+    padding: 7px 0 5px 0;
+  }
+}

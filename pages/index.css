@@ -72,10 +72,22 @@
 @import url('../blocks/popup-product/__imgzone/popup-product__imgzone.css');
 @import url('../blocks/popup-product/__img/popup-product__img.css');
 @import url('../blocks/popup-product/__opisanie/popup-product__opisanie.css');
-@import url('../blocks/popup-product/__properties/popup-product__properties.css');
-@import url('../blocks/popup-product/__properties/_label/popup-product__properties_label.css');
-@import url('../blocks/popup-product/__properties/_radio/popup-product__properties_radio.css');
-/*@import url('../blocks/modal/_feedback/modal_feedback.css');*/
+@import url('../blocks/input-radio/input-radio.css');
+@import url('../blocks/input-radio/_label/input-radio_label.css');
+@import url('../blocks/input-radio/_radio/input-radio_radio.css');
+/*@import url('../blocks/modal/_form/modal_form.css');*/
+
+@import url('../blocks/message/message.css');
+@import url('../blocks/message/__container/message__container.css');
+@import url('../blocks/message/__title/message__title.css');
+@import url('../blocks/message/__continue-btn/message__continue-btn.css');
+@import url('../blocks/message/__cart-btn/message__cart-btn.css');
+
+@import url('../blocks/order/order.css');
+@import url('../blocks/order/__container/order__container.css');
+@import url('../blocks/order/__title/order__title.css');
+@import url('../blocks/order/__table/order__table.css');
+@import url('../blocks/order/__item/order__item.css');
 
 @import url('../blocks/popup-product/__cross/popup-product__cross.css');
 
@@ -86,9 +98,11 @@
 @import url('../blocks/quantity/__input/quantity__input.css');
 
 @import url('../blocks/cart/cart.css');
+@import url('../blocks/cart/__title/cart__title.css');
 @import url('../blocks/cart/__line/cart__line.css');
 @import url('../blocks/cart/__line/_main/cart__line_main.css');
 @import url('../blocks/cart/__line/_total/cart__line_total.css');
+@import url('../blocks/cart/__line/_visible/cart__line_visible.css');
 @import url('../blocks/cart/__line-product/cart__line-product.css');
 @import url('../blocks/cart/__product-img/cart__product-img.css');
 @import url('../blocks/cart/__product-title/cart__product-title.css');
@@ -97,22 +111,34 @@
 @import url('../blocks/cart/__product-text/cart__product-text.css');
 @import url('../blocks/cart/__product-text/_small/cart__product-text_small.css');
 @import url('../blocks/cart/__product-text/_big/cart__product-text_big.css');
+@import url('../blocks/cart/__product-text/_price/cart__product-text_price.css');
+@import url('../blocks/cart/__product-text/_cost/cart__product-text_cost.css');
+@import url('../blocks/cart/__product-text/_quontity/cart__product-text_quontity.css');
 @import url('../blocks/cart/__product-cost/cart__product-cost.css');
 @import url('../blocks/cart/__product-trash/cart__product-trash.css');
 @import url('../blocks/cart/__clear-btn/cart__clear-btn.css');
+@import url('../blocks/cart/__order-btn/cart__order-btn.css');
+@import url('../blocks/cart/__empty/cart__empty.css');
 
 @import url('../blocks/cart/__container/cart__container.css');
 @import url('../blocks/cart/__table/cart__table.css');
 
 
-@import url('../blocks/feedback/feedback.css');
-@import url('../blocks/feedback/__input/feedback__input.css');
-@import url('../blocks/feedback/__input/_input-error/feedback__input_input-error.css');
-@import url('../blocks/feedback/__input/_error/feedback__input_error.css');
-@import url('../blocks/feedback/__input/_error-visible/feedback__input_error-visible.css');
-@import url('../blocks/feedback/__submit-btn/feedback__submit-btn.css');
-@import url('../blocks/feedback/__submit-btn/_disable/feedback__submit-btn_disable.css');
-@import url('../blocks/feedback/__input/_type_activity/feedback__input_type_activity.css');
+@import url('../blocks/form/form.css');
+@import url('../blocks/form/__description/form__description.css');
+@import url('../blocks/form/__input/form__input.css');
+@import url('../blocks/form/__input/_font_small/form__input_font_small.css');
+@import url('../blocks/form/__input/_input-error/form__input_input-error.css');
+@import url('../blocks/form/__input/_error/form__input_error.css');
+@import url('../blocks/form/__textarea/form__textarea.css');
+@import url('../blocks/form/__error/form__error.css');
+@import url('../blocks/form/__error/_visible/form__error_visible.css');
+@import url('../blocks/form/__input/_error-visible/form__input_error-visible.css');
+@import url('../blocks/form/__submit-btn/form__submit-btn.css');
+@import url('../blocks/form/__submit-btn/_color_orange/form__submit-btn_color_orange.css');
+@import url('../blocks/form/__submit-btn/_color_white/form__submit-btn_color_white.css');
+@import url('../blocks/form/__submit-btn/_disable/form__submit-btn_disable.css');
+@import url('../blocks/form/__input/_type_activity/form__input_type_activity.css');
 
 @import url('../blocks//js-active/js-active.css');
 

@@ -1,16 +1,18 @@
 .header__cart_active {
     opacity: 1; 
-    animation: scaleCart 5s linear 3s infinite;
     width: 228px;
     height: 54px;
     position: sticky;
     top: 70px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .header__cart_active {
       width: 70px;
       position: fixed;
       right: 10px;
       top: 70px;
+      background-color: #ffe600;
+      border: 2px dotted #c5b30c;
+    
     }
   }

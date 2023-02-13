@@ -82,14 +82,17 @@ class FormValidator {
       });
       this._setEventListeners();
     }
+    refresh() {
+    this._toggleButtonState();
+  }
   }
   
    const config = {
-    formSelector: ".feedback",
-    inputSelector: ".feedback__input",
-    submitButtonSelector: ".feedback__submit-btn",
-    inactiveButtonClass: "feedback__submit-btn_disable",
-    inputErrorClass: "feedback__input_input-error",
-    errorClass: "feedback__input_error-visible",
+    formSelector: ".form",
+    inputSelector: ".form__input",
+    submitButtonSelector: ".form__submit",
+    inactiveButtonClass: "form__submit-btn_disable",
+    inputErrorClass: "form__input_input-error",
+    errorClass: "form__input_error-visible",
   };
   

@@ -716,7 +716,7 @@ const data = {
   },
   48: {
     id: 48,
-    title: "СТЕЙКБУГЕР",
+    title: "СТЕЙКБУРГЕР",
     cost: 290,
     description:
       "(Белая булка, яйцо, томат, стейк из свинины, бекон, салат Айсберг, лук, сыр чеддер,соус тартар и BBQ)",
@@ -1103,7 +1103,7 @@ const data = {
 };
 
 const base = [];
-fetch("http://pitstopslv.ru/json.json", {
+/*fetch("http://pitstopslv.ru/json.json", {
   method: "GET", // POST, PUT, DELETE, etc.
   headers: {
     "Content-Type": "text/json;charset=UTF-8",
@@ -1112,9 +1112,7 @@ fetch("http://pitstopslv.ru/json.json", {
 })
   .then((response) => response.json())
   .then((datas) => console.log(datas))
-  .catch((err) => console.log(err));
-
-  
+  .catch((err) => console.log(err));*/
 
 Object.keys(data).forEach((element) => {
   base.push(data[element]);

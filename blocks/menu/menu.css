@@ -4,7 +4,7 @@
   justify-content: space-between;
   grid-area: menu;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .menu {
     position: relative;
     display: none;

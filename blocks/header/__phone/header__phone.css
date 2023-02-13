@@ -24,11 +24,12 @@
     border-radius: 15px;
     box-shadow: #ffe600 0px 4px 12px -6px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .header__phone {
-        margin-left: 10px;
+        margin-left: 0px;
         font-size: 18px;
         font-weight: 500;
+        padding-left: 0px;
 
 
     }

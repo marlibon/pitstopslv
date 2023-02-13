@@ -4,7 +4,7 @@
   flex-direction: column;
   height: 340px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .popup-product__content {
     height: auto;
   }

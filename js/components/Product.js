@@ -104,17 +104,17 @@ export class Product {
       const element = `
       <label
       for="${item}"
-      class="popup-product__properties_label"
+      class="input-radio_label"
       >
       <input
         type="radio"
         name="properties"
         id="${item}"
-        class="popup-product__properties_radio"
+        class="input-radio_radio"
         value="${item}"
         ${checked}
       />
-      <span class="popup-product__properties_text">${this._item.properties[item].name}</span>
+      <span class="input-radio_text">${this._item.properties[item].name}</span>
       </label>
     `;
       this._formChangeProperties.innerHTML += element;
@@ -167,7 +167,7 @@ export class Product {
       ".popup-product__opisanie"
     );
     this._formChangeProperties = this._popupContainer.querySelector(
-      ".popup-product__properties"
+      ".input-radio"
     ); 
     this._formInputQuontity = this._popupContainer.querySelector(
       ".popup-product__quantity"

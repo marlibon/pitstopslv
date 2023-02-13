@@ -1,7 +1,7 @@
 #header__burger, [for=header__burger] {
     display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   [for=header__burger]{
       display: block;
       position: fixed;
@@ -13,6 +13,7 @@
       color: #000;
       font-size: 30px;
       grid-area: burger;
+      z-index: 99;
   }
   [for=header__burger]::before{
       content: '☰';

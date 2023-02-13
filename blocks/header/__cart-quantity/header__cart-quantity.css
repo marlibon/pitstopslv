@@ -12,8 +12,10 @@
   display: none;
   align-items: center;
   justify-content: center;
+  animation: scaleCart 5s linear 3s infinite;
+
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .header__cart-quantity {
     right: 2px;
   }

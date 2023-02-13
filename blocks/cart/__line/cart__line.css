@@ -8,13 +8,29 @@
     justify-content: center;
     border-bottom: 1px dashed #9c9c9f75;
 }
-@media screen and (max-width: 780px) {
-    .cart__line {
-        width: 90%;
-        grid-template-columns: 40% 40% 20%;
-        grid-template-rows: 150px 50px;
-        grid-template-areas: 
-      "product product close"
-      "price quantity cost";
-    }
+@media screen and (max-width: 930px) {
+  .cart__line {
+    grid-template-columns: minmax(auto, 250px) repeat(3, 1fr) minmax(auto, 30px);
   }
+}
+
+@media screen and (max-width: 768px) {
+  .cart__line {
+    height: auto;
+      grid-template-rows: 1fr;
+      grid-template-areas: 
+    "product price quantity cost trash";
+    padding: 7px 0 5px 0;
+  }
+}
+@media screen and (max-width: 471px) {
+  .cart__line {
+    height: auto;
+      grid-template-columns: 16% 60% 16%;
+      grid-template-rows: 70px 50px;
+      grid-template-areas: 
+    "product product trash"
+    "price quantity cost";
+    padding: 7px 0 5px 0;
+  }
+}

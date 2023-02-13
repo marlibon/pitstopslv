@@ -10,7 +10,7 @@ export class Cart {
     this.buttonCart = buttonCart;
     this._cartTableLineMain = this._cart.querySelector(".cart__line_main"); // заголовок таблицы
     this._cartTableLineTotal = this._cart.querySelector(".cart__line_total"); //итоговая строчка
-
+    this._cartEmptyImg = this._cart.querySelector('.cart__empty');
   // this.removeItem = this.removeItem.bind(this);
     this.remove = this.removeItem.bind(this);
   }
@@ -121,8 +121,9 @@ export class Cart {
       ); // общая стоимость
 
       this._cartCost.textContent = `${this.countCost()} руб.`;
-      this._cartTitle.textContent = "Ваша корзина";
-      this._cartTableLineMain.style.display = "grid";
+      this._cartTitle.classList.add("page_visibility");
+      this._cartEmptyImg.classList.remove("page_visibility");
+      this._cartTableLineMain.classList.add("cart__line_visible");
 
       //this._cartTable.append(this._cartTableLineMain);
 
@@ -170,13 +171,14 @@ export class Cart {
         this._cartTable.append(this._cartTableLineProduct);
       });
       //this._cartTable.append(this._cartTableLineTotal);
-      this._cartTableLineTotal.style.display = "grid";
+      this._cartTableLineTotal.classList.add("cart__line_visible");
 
       this.setEventListenersClearTable();
     } else {
-      this._cartTitle.textContent = "Ваша корзина пуста";
-      this._cartTableLineMain.style.display = "none";
-      this._cartTableLineTotal.style.display = "none";
+      this._cartTitle.classList.remove("page_visibility");
+      this._cartEmptyImg.classList.add("page_visibility");
+      this._cartTableLineMain.classList.remove("cart__line_visible");
+      this._cartTableLineTotal.classList.remove("cart__line_visible");
     }
   };
   renderCartQuantity() {

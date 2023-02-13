@@ -25,7 +25,7 @@
 .header__cart-link:hover {
     text-decoration: underline;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .header__cart-link:hover {
         text-decoration: underline;
     }

@@ -17,7 +17,7 @@
     padding: 20px 0 50px 0;
   }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
   .header {
     padding: 20px 0 20px 0;
     justify-content: flex-start;

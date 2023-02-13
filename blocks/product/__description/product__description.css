@@ -15,7 +15,7 @@
   align-items: flex-start;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .product__description {
     overflow: visible;
     max-height: 120px;

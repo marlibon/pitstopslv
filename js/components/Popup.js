@@ -1,6 +1,7 @@
 export class Popup {
   constructor(selector) {
     this._popup = document.querySelector(selector);
+    this._namePopup = selector;
     this._buttonClose = this._popup.querySelector(".popup__close");
     this.handleClosePopup = this.close.bind(this);
   }
@@ -15,6 +16,8 @@ export class Popup {
     this._popup.classList.remove("popup_opened");
     this.removeEventListeners();
     this._instanceProduct?.removeListeners();  // удаление слушателей у класса Product, после закрытия попапа
+    //window.location.hash = '#';
+
   }
 
   _handleEscClose = (e) => {
@@ -39,5 +42,9 @@ export class Popup {
     this._instanceProduct = that;
     this._popup.classList.add("popup_opened");
     this.setEventListeners();
+    /*window.location.hash = 
+    that 
+    ? `${this._namePopup.substring(1)}=${that._item.id}` 
+    : this._namePopup.substring(1)*/
   }
 }

@@ -15,13 +15,16 @@
   cursor: pointer;
   z-index: 99;
   grid-area: cart;
+  width: 250px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .header__cart {
-    width: 70px;
+    width: 30px;
     position: fixed;
     right: 7%;
     top: 70px;
-    height: 54px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
   }
 }

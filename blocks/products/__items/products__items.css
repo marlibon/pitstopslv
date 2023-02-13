@@ -4,7 +4,7 @@
   justify-content: center;
 
 }
-@media only screen and (max-width: 579px) {
+@media only screen and (max-width: 768px) {
   .products__items {
   }
 }

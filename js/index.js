@@ -38,11 +38,14 @@ import { ProductPizza } from "./components/ProductPizza.js";
 import { Popup } from "./components/Popup.js";
 import { Renderable } from "./components/Renderable.js";
 import { Cart } from "./components/Cart.js";
+import { Order } from "./components/Order.js";
+
+
 
 // функция создания карточки продукта
 // item - объект с данными, templateSelector - селектор шаблона, который надо использовать как образец, popularSelector - селектор продукта, в зависимости от места вставки
-const createCard = (item, handleClickFunction, selector, handleAddCard) => {
-  const newElement = new Product(item, selector, handleClickFunction, handleAddCard);
+const createCard = (item, handleProductClick, selector, handleAddCard) => {
+  const newElement = new Product(item, selector, handleProductClick, handleAddCard);
   return newElement.renderCard();
 };
 
@@ -57,6 +60,7 @@ cart.addItem(item);
 cart.renderCartQuantity()
 productPopup.close();
 that.removeListeners();
+messagePopup.open()
 }
 
 // ПИЦЦА: создание экземпляра Renderable - вставка текста в контейнер. Внутри - процесс генерации карточек
@@ -123,12 +127,37 @@ productPopular.renderItems(); // запуск генерации
 // создание экземпляра попапа для продукта
 const productPopup = new Popup(selectorPopupProduct);
 
-// создание экземпляра попапа для продукта
+// создание экземпляра попапа для корзины
 const cartPopup = new Popup(selectorPopupCart);
+
+// создание экземпляра попапа для подтверждения
+const messagePopup = new Popup(selectorPopupMessage);
+
+// создание экземпляра попапа для оформления заказа
+const orderPopup = new Popup(selectorPopupOrder);
 
 // создание корзины
 const cart = new Cart('#template-cart', buttonCart);
 cart.renderCartQuantity()
+
+
+//const refreshValidationAddress = () => 
+
+const order = new Order(() => address.refresh());
+order.enable();
+
+// создание класса оформление заказа
+/* 
+1. передаем 2 функции:
+  на переход в корзину
+  на показ попап - спасибо за заказ
+  */
+/* ВАЛИДАЦИЯ*/
+const orderUserBlock = new FormValidator(config, document.querySelector('.form_user-block'));
+orderUserBlock.enableValidation();
+
+const address = new FormValidator(config, document.querySelector('.address'));
+address.enableValidation();
 
 // отслеживание клика по корзине
 buttonCart.parentNode.addEventListener('click', (evt) => {
@@ -137,9 +166,53 @@ buttonCart.parentNode.addEventListener('click', (evt) => {
   cartPopup.open();
 
 })
+buttonGoCart.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  messagePopup.close()
+  cart.renderCart();
+  cartPopup.open();
+})
+
+buttonCloseMessagePopup.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  messagePopup.close()
+})
+
+buttonGoOrder.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  cartPopup.close();
+  orderPopup.open()
+})
+
+buttonBackCart.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  orderPopup.close();
+  cart.renderCart();
+  cartPopup.open();
+})
+
 
 /* 
-проблемы:
+//функция отслеживания состояния открытых окон
+window.addEventListener('hashchange', hashchange);
 
+function hashchange(){ 
+  let hash = location.hash;
 
+  hash == '' && document.querySelectorAll('.popup_opened')?.forEach((item) => {
+    item.classList.remove('popup_opened');})
+  hash === '#popup-cart' && cartPopup.open();
+  hash === '#popup-order' && orderPopup.open();
+ if (hash.indexOf('product') ) {
+  const filterId = base[hash.split('=')[1]]; // фильтруем только объекты с пиццей
+  const card = new Product(filterId, selectorProduct, handleProductClick, handleAddCard);
+  card._createValuesForPopup();
+  
+  productPopup.open(card);
+ }
+}
 */
+  /* do something 
+  вытащить id продукта
+  сделать экземпляр карточки
+   открыть попап карточки*/
