@@ -1,5 +1,5 @@
 export class Cart {
-  constructor(templateSelector, buttonCart) {
+  constructor(templateSelector, buttonCartQuontity) {
     this._templateSelector = templateSelector;
     this.items = JSON.parse(localStorage.getItem("cart")) || [];
     this._cart = document.querySelector(".cart");
@@ -7,7 +7,7 @@ export class Cart {
     this._cartTable = this._cart.querySelector(".cart__table");
     this._totalPrice = document.querySelector(".cart__total-price");
 
-    this.buttonCart = buttonCart;
+    this.buttonCartQuontity = buttonCartQuontity;
     this._cartTableLineMain = this._cart.querySelector(".cart__line_main"); // заголовок таблицы
     this._cartTableLineTotal = this._cart.querySelector(".cart__line_total"); //итоговая строчка
     this._cartEmptyImg = this._cart.querySelector('.cart__empty');
@@ -184,12 +184,12 @@ export class Cart {
   renderCartQuantity() {
     this._count = this.countQuantity();
     if (this._count) {
-      this.buttonCart.parentNode.classList.add("header__cart_active");
-      this.buttonCart.textContent = this.countQuantity();
-      this.buttonCart.classList.add("page_visibility");
+      this.buttonCartQuontity.parentNode.classList.add("header__cart_active");
+      this.buttonCartQuontity.textContent = this.countQuantity();
+      this.buttonCartQuontity.classList.add("page_visibility");
     } else {
-      this.buttonCart.parentNode.classList.remove("header__cart_active");
-      this.buttonCart.classList.remove("page_visibility");
+      this.buttonCartQuontity.parentNode.classList.remove("header__cart_active");
+      this.buttonCartQuontity.classList.remove("page_visibility");
     }
   }
 }

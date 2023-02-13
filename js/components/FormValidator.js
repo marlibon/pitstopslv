@@ -1,4 +1,4 @@
-class FormValidator {
+export class FormValidator {
     constructor(configuration, _formElement) {
       this._inputSelector = configuration.inputSelector;
       this._submitButtonSelector = configuration.submitButtonSelector;
@@ -87,7 +87,7 @@ class FormValidator {
   }
   }
   
-   const config = {
+export const configValidator = {
     formSelector: ".form",
     inputSelector: ".form__input",
     submitButtonSelector: ".form__submit",

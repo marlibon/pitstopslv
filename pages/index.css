@@ -5,8 +5,6 @@
 @import url('../blocks/header/header.css');
 @import url('../blocks/header/__info/header__info.css');
 @import url('../blocks/header/__description/header__description.css');
-@import url('../blocks/header/__phrase/header__phrase.css');
-@import url('../blocks/header/__phrase-animation/header__phrase-animation.css');
 @import url('../blocks/header/__brand/header__brand.css');
 @import url('../blocks/header/__work-time/header__work-time.css');
 @import url('../blocks/header/__phone/header__phone.css');

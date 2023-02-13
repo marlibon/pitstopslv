@@ -33,12 +33,31 @@ static selectors = {
 }
 потом в консструкторе надо его включить (   super(ClassName.selectors.template) )
 */
+import {
+  nameCompany,
+  selectorProduct,
+  selectorProductPopular,
+  selectorPopupProduct,
+  selectorPopupPizza,
+  selectorPopupMessage,
+  selectorPopupCart,
+  selectorPopupOrder,
+  selectorButtonCart,
+  buttonCartQuontity,
+  buttonGoCart,
+  buttonCloseMessagePopup,
+  buttonGoOrder,
+  buttonBackCart,
+  
+} from "./utils/const.js";
+import { base } from "./utils/data.js";
 import { Product } from "./components/Product.js";
-import { ProductPizza } from "./components/ProductPizza.js";
+import { Slider } from "./components/Slider.js";
 import { Popup } from "./components/Popup.js";
 import { Renderable } from "./components/Renderable.js";
 import { Cart } from "./components/Cart.js";
 import { Order } from "./components/Order.js";
+import { FormValidator, configValidator } from "./components/FormValidator.js";
 
 
 
@@ -124,6 +143,10 @@ const productPopular = new Renderable(
 );
 productPopular.renderItems(); // запуск генерации
 
+// создание экземпляра Слайдер и его включение
+const slider = new Slider();
+slider.enable();
+
 // создание экземпляра попапа для продукта
 const productPopup = new Popup(selectorPopupProduct);
 
@@ -137,7 +160,7 @@ const messagePopup = new Popup(selectorPopupMessage);
 const orderPopup = new Popup(selectorPopupOrder);
 
 // создание корзины
-const cart = new Cart('#template-cart', buttonCart);
+const cart = new Cart('#template-cart', buttonCartQuontity);
 cart.renderCartQuantity()
 
 
@@ -153,14 +176,14 @@ order.enable();
   на показ попап - спасибо за заказ
   */
 /* ВАЛИДАЦИЯ*/
-const orderUserBlock = new FormValidator(config, document.querySelector('.form_user-block'));
+const orderUserBlock = new FormValidator(configValidator, document.querySelector('.form_user-block'));
 orderUserBlock.enableValidation();
 
-const address = new FormValidator(config, document.querySelector('.address'));
+const address = new FormValidator(configValidator, document.querySelector('.address'));
 address.enableValidation();
 
 // отслеживание клика по корзине
-buttonCart.parentNode.addEventListener('click', (evt) => {
+buttonCartQuontity.parentNode.addEventListener('click', (evt) => {
   evt.preventDefault();
   cart.renderCart();
   cartPopup.open();

@@ -1117,4 +1117,4 @@ const base = [];
 Object.keys(data).forEach((element) => {
   base.push(data[element]);
 });
-let newbase = "";
+export { base } ;
