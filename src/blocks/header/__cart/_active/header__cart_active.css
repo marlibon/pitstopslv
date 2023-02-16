@@ -7,12 +7,9 @@
 }
 @media only screen and (max-width: 768px) {
     .header__cart_active {
-      width: 70px;
-      position: fixed;
-      right: 10px;
-      top: 70px;
-      background-color: #ffe600;
-      border: 2px dotted #c5b30c;
-    
+      width: auto;
+      position: relative;
+      right: 0;
+      top: 0;    
     }
   }

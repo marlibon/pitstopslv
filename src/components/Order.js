@@ -100,14 +100,14 @@ export class Order {
             return 'доставка бесплатная'
         } else if (this.data['countCost'] < 610 && this.data["Способ доставки"] == 'по городу') {
             this._deliveryCostRub = 80;
-            return '80 руб.'
+            return '80 ₽'
         } else if (this.data['countCost'] < 810 && this.data["Способ доставки"] == 'в промзону') {
             this._deliveryCostRub = 120;
-            return '120 руб.';
+            return '120 ₽';
         }
         else {
             this._deliveryCostRub = 0;
-            return 'самовывоз - 0 руб.';
+            return 'самовывоз - 0 ₽';
         }
 
 
@@ -118,9 +118,9 @@ export class Order {
         this.data["Телефон"] = this._phone.value;
         this.data["Способ доставки"] = this._formSposob.value;
         this.data["Адрес"] = this._address.value;
-        this.data["Заказ"] = `${this.data['data'].length} шт. за ${this.data['countCost']} руб.`;
+        this.data["Заказ"] = `${this.data['data'].length} шт. за ${this.data['countCost']} ₽`;
         this.data["Стоимость доставки"] = this._deliveryCost();
-        this.data["Всего к оплате"] = (this.data['countCost'] + this._deliveryCostRub) + ' руб.';
+        this.data["Всего к оплате"] = (this.data['countCost'] + this._deliveryCostRub) + ' ₽';
 
         this._confirmData = `
         <li class="order__item">Имя: ${this.data["Имя"]}</li>

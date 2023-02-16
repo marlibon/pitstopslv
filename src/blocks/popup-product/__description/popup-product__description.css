@@ -7,4 +7,5 @@
     width: 100%;
     max-width: 410px;
     grid-area: description;
+    min-height: 240px;
 }

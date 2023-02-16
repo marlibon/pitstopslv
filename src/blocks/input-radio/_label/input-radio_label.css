@@ -6,4 +6,9 @@
     transition: color 150ms ease 0s;
     cursor: pointer;
   }
+  @media only screen and (max-width: 600px) {
+    .input-radio_label {
+      font-size: 14px;
+    }
+  }
   

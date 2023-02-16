@@ -17,14 +17,12 @@
   grid-area: cart;
   width: 250px;
 }
+.header__cart:hover {
+  border: 3px dotted #b9a700;
+  box-shadow: 0 4px 12px -6px #ffe600;
+}
 @media only screen and (max-width: 768px) {
   .header__cart {
-    width: 30px;
-    position: fixed;
-    right: 7%;
-    top: 70px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
+    display: none;
   }
 }

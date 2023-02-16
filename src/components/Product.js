@@ -35,11 +35,12 @@ export class Product {
     this._elementImg.src = this._item.img;
     this._elementImg.alt = `${this._item.type} ${this._item.title} - ${this._item.description} `;
 
-    this._elementDescription
-      ? (this._elementDescription.textContent = this._item.description)
-      : "";
+    if (this._item.description && this._elementDescription) {
+      this._elementDescription.textContent = this._item.description;
+      this._elementDescription.classList.add('page_visibility');
+    } 
     this._elementTitle.textContent = this._item.title;
-    this._elementPrice.textContent = `от ${this._getMinCost()} руб.`;
+    this._elementPrice.textContent = `${this._getMinCost()} ₽`;
   }
 
   _getMinCost() {
@@ -49,7 +50,7 @@ export class Product {
       Object.keys(this._item.properties).forEach((item) => {
         this._arrCost.push(this._item.properties[item].cost);
       });
-      return Math.min(...this._arrCost);
+      return `от ${Math.min(...this._arrCost)}`;
     } else {
       return this._item.cost;
     }
@@ -69,15 +70,15 @@ export class Product {
     return this._element;
   }
 
-    /* ГЕНЕРАЦИЯ КОНТЕНТА ДЛЯ ПОПАПА */
+  /* ГЕНЕРАЦИЯ КОНТЕНТА ДЛЯ ПОПАПА */
 
   _renderContentPopup = () => {
     this._selectedProducts = {}; // подготовленные (выбранные товары) для добавления в корзину
     let { id, img, title, description, cost, type, weight, properties } =
       this._item;
-      let valueProperties; 
-      if (weight) weight = `вес: ${weight}г`;
-      this._quontity = Number(this._popupQuantityInput.value)
+    let valueProperties;
+    if (weight) weight = `вес: ${weight}г`;
+    this._quontity = Number(this._popupQuantityInput.value)
 
     if (properties) {
       valueProperties =
@@ -88,10 +89,12 @@ export class Product {
     this._popupImg.src = img;
     this._popupImg.alt = description;
     this._popupTitle.textContent = title;
-    this._popupDescription.textContent = description;
+    description
+      ? this._popupDescription.textContent = description
+      : this._popupDescription.textContent = '';
     this._popupWeight.textContent = weight;
-    this._popupAddCard.textContent = `Добавить в корзину за ${cost * this._quontity} руб`;
-    this._selectedProducts = {id, img, title, description, cost, type, weight, quantity: this._quontity}
+    this._popupAddCard.textContent = `Добавить в корзину за ${cost * this._quontity}₽`;
+    this._selectedProducts = { id, img, title, description, cost, type, weight, quantity: this._quontity }
   };
 
 
@@ -120,32 +123,32 @@ export class Product {
       this._formChangeProperties.innerHTML += element;
     });
   }
-  
+
   _buttonAddCard(evt) {
     this._handleAddCard(evt, this._selectedProducts, this);
-        this._renderContentPopup();
-        this._popupQuantityMinus.disabled = 'disabled'
-      }
+    this._renderContentPopup();
+    this._popupQuantityMinus.disabled = 'disabled'
+  }
 
   _plusQuontity = (evt) => {
     evt.preventDefault();
     ++this._popupQuantityInput.value;
-  this._popupQuantityMinus.disabled = ''
-  this._renderContentPopup()
+    this._popupQuantityMinus.disabled = ''
+    this._renderContentPopup()
 
-    }
+  }
   _minusQuontity = (evt) => {
     evt.preventDefault();
     --this._popupQuantityInput.value;
     this._popupQuantityInput.value >= 2
-    ? this._popupQuantityMinus.disabled = ''
-    : this._popupQuantityMinus.disabled = 'disabled'
+      ? this._popupQuantityMinus.disabled = ''
+      : this._popupQuantityMinus.disabled = 'disabled'
     this._renderContentPopup();
 
   }
 
 
-  removeListeners () {
+  removeListeners() {
     this._popupAddCard.removeEventListener('click', this._buttonAddCard);
     this._popupQuantityMinus.removeEventListener('click', this._minusQuontity);
     this._popupQuantityPlus.removeEventListener('click', this._plusQuontity);
@@ -168,10 +171,10 @@ export class Product {
     );
     this._formChangeProperties = this._popupContainer.querySelector(
       ".input-radio"
-    ); 
+    );
     this._formInputQuontity = this._popupContainer.querySelector(
       ".popup-product__quantity"
-    ); 
+    );
 
     this._popupAddCard = this._popupContainer.querySelector(
       ".popup-product__add-cart"
@@ -186,7 +189,7 @@ export class Product {
       ".quantity__input"
     );
     this._quontity = Number(this._popupQuantityInput.value)
-    
+
     this._formInputQuontity.reset()
     this._popupQuantityMinus.disabled = 'disabled'; // обнуляем счетчик и дизейблим кнопку
 
@@ -197,14 +200,14 @@ export class Product {
       this._formChangeProperties.classList.add('page_visibility');
     } else {
       this._formChangeProperties.classList.remove('page_visibility');
-     }
+    }
 
     // установка слушателя на кнопку добавления в корзину
     this._popupAddCard.addEventListener('click', this._buttonAddCard)
     // установка слушателя на редактирование количества
     this._popupQuantityMinus.addEventListener('click', this._minusQuontity)
     this._popupQuantityPlus.addEventListener('click', this._plusQuontity)
-    
+
     this._renderContentPopup();
 
   };

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Пит Стоп Салават</title>
 </head>
 
@@ -20,9 +20,9 @@
           ПиТ <span class="header_color_red">StoP </span></span>
         
       </p>
-      <p class="header__description">
+      <address class="header__description">
         г. Салават, ул.Чапаева, 42а, ст2
-      </p>
+      </address>
     </div>
     <div class="header__work-time">24/7</div>
     <a href="tel:+79178004477" class="header__phone" title="позвонить в ПитСтоп">+7 (917) 800 44 77</a>
@@ -51,23 +51,23 @@
       </ul>
     </nav>
     <div class="header__cart">
-      <a href="#" class="header__cart-link"></a>
-      <span class="header__cart-quantity"></span>
+      <button type="button" class="header__cart-link"></button>
+      <span class="header__cart-quantity cart_quantity"></span>
     </div>
   </header>
   <main class="main">
     <section class="product-popular">
       <h2 class="products__title products__title_medium">Часто заказывают</h2>
       <div class="product-popular__slider">
-        <div class="product-popular__container">
+        <ul class="product-popular__container">
           <!-- сюда загрузятся актуальные часто заказываемые товары через JS -->
-        </div>
-        <a class="product-popular__slider-button product-popular__slider-button-prev" href="#">
+        </ul>
+        <button class="product-popular__slider-button product-popular__slider-button-prev" type="button">
           <img src="./images/slider-rev.png" alt="" class="product-popular__slider-button-img" />
-        </a>
-        <a class="product-popular__slider-button product-popular__slider-button-next" href="#">
+        </button>
+        <button class="product-popular__slider-button product-popular__slider-button-next" type="button">
           <img src="./images/slider-next.png" alt="" class="product-popular__slider-button-img" />
-        </a>
+        </button>
       </div>
     </section>
     <section class="products">
@@ -89,6 +89,15 @@
       </div>
     </section>
   </main>
+  <nav class="mob-menu">
+    <button type="button" class="mob-menu__item mob-menu__catalog"><img style="max-width: 24px;" src="./images/mob-menu-catalog.png" alt="каталог"></button>
+    <button type="button" class="mob-menu__item mob-menu__call"><img style="max-width: 24px;" src="./images/mob-menu-call.png" alt="позвонить"></button>
+    <button type="button" class="mob-menu__contacts">
+      <img src="./images/logo__img.png" alt="контакты" class="mob-menu__img">
+    </button>
+    <button type="button" class="mob-menu__item mob-menu__cart"><img style="max-width: 24px;" src="./images/mob-menu-cart.png" alt="корзина"><span class="mob-menu__cart-quantity cart_quantity"></span></button>
+    <button type="button" class="mob-menu__item mob-menu__orders"><img style="max-width: 24px;" src="./images/mob-menu-orders.png" alt="заказы"></button>
+  </nav>
   <footer class="footer">
     <div class="footer__links">
       <ul class="footer__column">
@@ -150,8 +159,8 @@
       <img src="./images/button-close.svg" alt="кнопка закрытия" class="popup__close" />
       <div class="message">
         <h3 class="message__title">Успешно добавлено!</h3>
-        <button class="message__continue-btn">продолжить покупки</button>
-        <button class="message__cart-btn">перейти в корзину</button>
+        <button class="message__continue-btn">Продолжить покупки</button>
+        <button class="message__cart-btn">Перейти в корзину</button>
       </div>
     </div>
   </section>
@@ -176,8 +185,8 @@
         <summary class="cart__line cart__line_total">
           <p class="cart__product-text cart__product-text_small ">всего на сумму:</p>
           <p class="cart__product-text cart__product-text_big">0 руб.</p>
-          <button type="reset" class="cart__clear-btn">очистить</button>
-          <button type="submit" class="cart__order-btn">оформить</button>
+          <button type="reset" class="cart__clear-btn">Очистить</button>
+          <button type="submit" class="cart__order-btn">Оформить</button>
         </summary>
         <img src="./images/cart_empty.png" alt="в вашей корзине нет товаров" class="cart__empty">
       </div>
@@ -206,7 +215,7 @@
         <div class="form_delivery-block" style="display: none;">
           <button type="button" class="form__submit-btn form__submit-btn_color_white form_go-user-block">&larr;
             вернуться назад</button>
-          <p class="form__description">сами заберете или вам привезти?</p>
+          <p class="form__description">Сами заберете или вам привезти?</p>
           <form name="sposob" class="input-radio page_visibility">
             <label for="sam" class="input-radio_label">
               <input type="radio" name="sposob" id="sam" class="input-radio_radio" value="самовывоз"
@@ -228,7 +237,7 @@
           </form>
           <form name="address" class="form address">
             <div>
-              <p class="form__description">напишите, пожалуйста, полный адрес</p>
+              <p class="form__description">Напишите, пожалуйста, полный адрес</p>
               <input placeholder="г.Салават, ул. ..., д. ..., кв. ..." type="text" id="address" minlength="8"
                 maxlength="102" class="form__input form__input_font_small form__input_address" required>
               <span class="form__error address-error"></span>
@@ -241,12 +250,11 @@
         <div class="form_confirm-block" style="display: none;">
           <button type="button" class="form__submit-btn form__submit-btn_color_white form_go-user-block">&larr;
             вернуться назад</button>
-          <p class="form__description">проверьте заполненные данные</p>
+          <p class="form__description">Проверьте заполненные данные</p>
           <ul class="order__table">
           </ul>
 
-          <p class="form__description">дополнительная информация для кассира/курьера</p>
-          <textarea placeholder="ваш комментарий" type="text" id="address" minlength="8" maxlength="402"
+          <textarea placeholder="Дополнительная информация" type="text" id="address" minlength="8" maxlength="402"
             class="form__input form__textarea form__input_comment"></textarea>
           <button type="submit" name="form__submit" class="form__submit-btn form__submit">Оформить заказ</button>
         </div>
@@ -267,14 +275,15 @@
 
 
   <!-- шаблоны -->
+  <!-- шаблон "часто заказывают" -->
   <template id="template-product-popular">
-    <article data-id="" class="product-popular__item">
+    <li data-id="" class="product-popular__item">
       <img src="#" alt="" class="product-popular__img">
       <div class="product-popular__content">
         <h3 class="product-popular__title"></h3>
         <p class="product-popular__price"></p>
       </div>
-    </article>
+    </li>
   </template>
   <!-- шаблон продукта -->
   <template id="template-product">

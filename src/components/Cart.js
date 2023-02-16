@@ -1,5 +1,5 @@
 export class Cart {
-  constructor(templateSelector, buttonCartQuontity) {
+  constructor(templateSelector, buttonsCartQuontity) {
     this._templateSelector = templateSelector;
     this.items = JSON.parse(localStorage.getItem("cart")) || [];
     this._cart = document.querySelector(".cart");
@@ -7,7 +7,7 @@ export class Cart {
     this._cartTable = this._cart.querySelector(".cart__table");
     this._totalPrice = document.querySelector(".cart__total-price");
 
-    this.buttonCartQuontity = buttonCartQuontity;
+    this.buttonsCartQuontity = buttonsCartQuontity;
     this._cartTableLineMain = this._cart.querySelector(".cart__line_main"); // заголовок таблицы
     this._cartTableLineTotal = this._cart.querySelector(".cart__line_total"); //итоговая строчка
     this._cartEmptyImg = this._cart.querySelector('.cart__empty');
@@ -120,7 +120,7 @@ export class Cart {
         ".cart__product-text_big"
       ); // общая стоимость
 
-      this._cartCost.textContent = `${this.countCost()} руб.`;
+      this._cartCost.textContent = `${this.countCost()} ₽`;
       this._cartTitle.classList.add("page_visibility");
       this._cartEmptyImg.classList.remove("page_visibility");
       this._cartTableLineMain.classList.add("cart__line_visible");
@@ -183,14 +183,20 @@ export class Cart {
   };
   renderCartQuantity() {
     this._count = this.countQuantity();
-    if (this._count) {
-      this.buttonCartQuontity.parentNode.classList.add("header__cart_active");
-      this.buttonCartQuontity.textContent = this.countQuantity();
-      this.buttonCartQuontity.classList.add("page_visibility");
-    } else {
-      this.buttonCartQuontity.parentNode.classList.remove("header__cart_active");
-      this.buttonCartQuontity.classList.remove("page_visibility");
-    }
+    this.buttonsCartQuontity.forEach((item) => {
+      if (this._count) {
+        item.parentNode.classList.add("header__cart_active");
+        item.textContent = this.countQuantity();
+        item.classList.add("page_visibility");
+      } else {
+        item.parentNode.classList.remove("header__cart_active");
+        item.classList.remove("page_visibility");
+      }
+    
+    
+    
+    })
+    
   }
   exportData() {
     return this.items;

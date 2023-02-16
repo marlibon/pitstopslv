@@ -29,7 +29,7 @@
     grid-template-columns: auto min-content repeat(3, auto);
   }
 }
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 421px) {
   .cart__line_total {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto auto;

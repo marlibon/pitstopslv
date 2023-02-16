@@ -15,7 +15,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  max-height: 95%;
+  max-height: 86%;
 }
 @media screen and (max-width: 768px) {
   .cart__container {

@@ -12,10 +12,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: none;
 }
 .product-popular__slider-button:hover {
     opacity: 0.9;
     scale: 1.1;
+    border: 1px solid black;
+
 }
 
 .product-popular__slider-button-img {
@@ -30,3 +33,10 @@
 .product-popular__slider-button-next {
     right: 0;
 }
+
+@media only screen and (max-width: 768px) {
+    .product-popular__slider-button {
+    /* display: none;*/
+    }
+  }
+  

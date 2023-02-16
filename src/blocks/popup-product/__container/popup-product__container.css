@@ -24,8 +24,10 @@
 @media screen and (max-width: 768px) {
   .popup-product__container {
     max-width: 97%;
+    max-height: 85%;
     padding: 20px;
     grid-template-columns: 1fr;
+    grid-template-rows: 10% minmax(100px, 220px) auto;
     grid-template-areas: 
     "title"
     "img"

@@ -1,0 +1,6 @@
+.mob-menu__contacts {
+  grid-area: contacts;
+  background-color: transparent;
+  border: none;
+  transform: translateY(-25%);
+}

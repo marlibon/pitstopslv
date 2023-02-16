@@ -12,7 +12,7 @@ import {
   selectorPopupOrder,
   selectorPopupOrderCompleted,
   selectorButtonCart,
-  buttonCartQuontity,
+  buttonsCartQuontity,
   buttonGoCart,
   buttonCloseMessagePopup,
   buttonGoOrder,
@@ -41,7 +41,7 @@ const handleProductClick = (that) => {
   productPopup.open(that);
 };
 
-// фукнция обработки добалвения товара в корзину
+// фукнция обработки добавления товара в корзину
 const handleAddCard = (evt, item, that) => {
   cart.addItem(item);
   cart.renderCartQuantity()
@@ -131,9 +131,15 @@ const orderPopup = new Popup(selectorPopupOrder);
 const orderCompleted = new Popup(selectorPopupOrderCompleted);
 
 // создание корзины
-const cart = new Cart('#template-cart', buttonCartQuontity);
+const cart = new Cart('#template-cart', buttonsCartQuontity);
 cart.renderCartQuantity()
 
+// открытие попапа корзины
+const handleClickCart = (evt) => {
+  evt.preventDefault();
+  cart.renderCart();
+  cartPopup.open();
+}
 
 const handlerSubmitOrder = (data) => {
   console.log(data);
@@ -147,7 +153,6 @@ const handlerSubmitOrder = (data) => {
 
 
   const message = contentOrder;
-
   const token = "5506734715:AAGYKstSIFt0GGWmthQ8_ScDOqHnQmAbVtU";
   const chatId = -1001698638520;
   const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${message}&parse_mode=html`;
@@ -170,12 +175,7 @@ const handlerSubmitOrder = (data) => {
 const order = new Order({ refreshValidation: () => { address.refresh() }, handlerSubmitOrder });
 order.enable();
 
-// создание класса оформление заказа
-/* 
-1. передаем 2 функции:
-  на переход в корзину
-  на показ попап - спасибо за заказ
-  */
+
 /* ВАЛИДАЦИЯ*/
 const orderUserBlock = new FormValidator(configValidator, document.querySelector('.form_user-block'));
 orderUserBlock.enableValidation();
@@ -184,12 +184,12 @@ const address = new FormValidator(configValidator, document.querySelector('.addr
 address.enableValidation();
 
 // отслеживание клика по корзине
-buttonCartQuontity.parentNode.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  cart.renderCart();
-  cartPopup.open();
-
+buttonsCartQuontity.forEach((item) => {
+item.parentNode.addEventListener('click', handleClickCart);
 })
+//buttonCartQuontity.parentNode.addEventListener('click', handleClickCart)
+//buttonCartQuontityMobile.parentNode.addEventListener('click', handleClickCart)
+
 buttonGoCart.addEventListener('click', (evt) => {
   evt.preventDefault();
   messagePopup.close()

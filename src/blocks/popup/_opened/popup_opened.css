@@ -1,6 +1,7 @@
 .popup_opened {
   visibility: visible;
   opacity: 1;
+  top: 0;
   display: flex;
   flex-direction: row-reverse;
 }

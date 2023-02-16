@@ -12,7 +12,10 @@ export const selectorPopupOrder = '.popup-order';
 export const selectorPopupOrderCompleted = '.popup-order-completed';
 
 export const selectorButtonCart = '.menu__cart';
-export const buttonCartQuontity = document.querySelector(".header__cart-quantity");
+
+export const buttonsCartQuontity = document.querySelectorAll(".cart_quantity");
+
+
 export const buttonGoCart = document.querySelector(".message__cart-btn");
 export const buttonCloseMessagePopup = document.querySelector(".message__continue-btn");
 export const buttonGoOrder = document.querySelector(".cart__order-btn");

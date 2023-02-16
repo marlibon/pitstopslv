@@ -2,6 +2,7 @@
 @import url('../vendor/fonts/inter.css');
 
 @import url('../blocks/style.css');
+@import url('../blocks/main/main.css');
 
 @import url('../blocks/header/header.css');
 @import url('../blocks/header/__info/header__info.css');
@@ -50,6 +51,16 @@
 @import url('../blocks/product/__footer/product__footer.css');
 @import url('../blocks/product/__price/product__price.css');
 @import url('../blocks/product/__button/product__button.css');
+
+@import url('../blocks/mob-menu/mob-menu.css');
+@import url('../blocks/mob-menu/__item/mob-menu__item.css');
+@import url('../blocks/mob-menu/__catalog/mob-menu__catalog.css');
+@import url('../blocks/mob-menu/__call/mob-menu__call.css');
+@import url('../blocks/mob-menu/__contacts/mob-menu__contacts.css');
+@import url('../blocks/mob-menu/__img/mob-menu__img.css');
+@import url('../blocks/mob-menu/__cart/mob-menu__cart.css');
+@import url('../blocks/mob-menu/__cart-quantity/mob-menu__cart-quantity.css');
+@import url('../blocks/mob-menu/__orders/mob-menu__orders.css');
 
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__links/footer__links.css');

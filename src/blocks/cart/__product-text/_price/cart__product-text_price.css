@@ -7,6 +7,7 @@
     font-weight: 400;
     grid-area: price;
     padding: 0 5px 0 5px;
+    white-space: nowrap;
   }
   .cart__product-text_price::after {
     content: " ₽/шт";
